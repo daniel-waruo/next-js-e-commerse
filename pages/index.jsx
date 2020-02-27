@@ -1,11 +1,11 @@
 import React from "react";
 import {MDBRow} from "mdbreact";
 import {graphql} from 'react-apollo';
-import {HOME_QUERIES} from '../../components/index/queries.jsx';
-import {CarouselHome, ProductsHome} from "../../components/index/components";
+import {HOME_QUERIES} from '../components/index/queries.jsx';
+import {CarouselHome, ProductsHome} from "../components/index/components";
 
-import {SpinnerLoader} from '../../components/global/index'
-import {withApp} from "../../components/app/index";
+import {SpinnerLoader} from '../components/global/index'
+import {withApp} from "../components/app/index";
 
 
 class Home extends React.Component {
@@ -38,6 +38,6 @@ class Home extends React.Component {
   }
 }
 
-export default withApp({ssr: false})(
+export default withApp({ssr: true})(
   graphql(HOME_QUERIES)(Home)
 );

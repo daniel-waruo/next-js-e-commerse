@@ -9,6 +9,7 @@ import {register, registerErrors} from '../../components/register/queries'
 
 import {withApp} from "../../components/app/index";
 
+
 class Register extends React.Component {
 
   constructor(props) {

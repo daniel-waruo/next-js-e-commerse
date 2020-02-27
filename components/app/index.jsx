@@ -10,6 +10,12 @@ import {MainFooter, SpinnerLoader} from '../global/index'
 import {withApollo} from "../../lib/apollo";
 import fetch from 'isomorphic-unfetch';
 
+// IMPORT MD BOOTSTRAP CSS
+// use during build
+//import './indexBuild.scss'
+// uncomment during dev
+// import './index.scss'
+
 global.fetch = fetch;
 
 class App extends Component {

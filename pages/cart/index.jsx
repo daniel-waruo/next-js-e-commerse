@@ -8,6 +8,7 @@ import {APP_QUERY} from "../../components/app/queries";
 import {SpinnerLoader} from '../../components/global/index';
 import {withApp} from '../../components/app/index'
 
+
 class CartPage extends React.Component {
 
   constructor(props) {

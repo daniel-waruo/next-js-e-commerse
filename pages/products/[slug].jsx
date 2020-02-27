@@ -12,6 +12,7 @@ import {CarouselProduct} from '../../components/product/components';
 import {withRouter} from 'next/router'
 import {withApp} from "../../components/app/index";
 
+
 class Product extends React.Component {
 
   render() {
