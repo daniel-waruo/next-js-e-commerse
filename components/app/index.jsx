@@ -7,7 +7,6 @@ import {APP_QUERY} from './queries'
 
 import {MainNavbar, ProductDialog} from "./components/index";
 import {MainFooter, SpinnerLoader} from '../global/index'
-import {withApollo} from "../../lib/apollo";
 import fetch from 'isomorphic-unfetch';
 
 // IMPORT MD BOOTSTRAP CSS
@@ -22,9 +21,9 @@ class App extends Component {
 
   render() {
     const mainStyle = {
-      paddingTop: '5rem',
+      paddingTop:"0.75rem",
       paddingBottom: "5rem",
-      minHeight: '100vh',
+      minHeight: '90vh',
       marginRight: 1,
       marginLeft: 1,
       overflow: 'hidden'
@@ -68,12 +67,9 @@ const MyApp = compose(
   )
 )(App);
 
-export const withApp = ({ ssr }) => PageComponent => {
-  const app = props => (
+export const withApp = PageComponent =>
+  props => (
     <MyApp>
       <PageComponent {...props} />
     </MyApp>
   );
-
-  return withApollo({ssr: ssr})(app)
-};

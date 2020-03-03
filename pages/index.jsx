@@ -1,11 +1,12 @@
 import React from "react";
-import {MDBRow} from "mdbreact";
+import {MDBCol, MDBRow} from "mdbreact";
 import {graphql} from 'react-apollo';
 import {HOME_QUERIES} from '../components/index/queries.jsx';
-import {CarouselHome, ProductsHome} from "../components/index/components";
+import {CarouselHome, CategoryMenuLinks, ProductsHome} from "../components/index/components";
 
 import {SpinnerLoader} from '../components/global/index'
 import {withApp} from "../components/app/index";
+import {withApollo} from "../lib/apollo";
 
 
 class Home extends React.Component {
@@ -28,16 +29,30 @@ class Home extends React.Component {
     if (error) return <p>Error :(</p>;
 
     return (
-      <div className="page mx-3">
-        <MDBRow>
-          <CarouselHome objects={allCarousel} heightClass="f-90"/>
+      <>
+        <MDBRow className={"mx-1 my-1"}>
+          <MDBCol md={"3"} className="f-85 d-none d-md-block ">
+            <div className={"h-100 z-depth-1 rounded mb0"}>
+              <CategoryMenuLinks categories={allCategories}/>
+            </div>
+          </MDBCol>
+          <MDBCol md={"9"} className={"p-0 z-depth-1 rounded mb-0"}>
+            <CarouselHome objects={allCarousel} heightClass="f-85"/>
+          </MDBCol>
         </MDBRow>
-        <ProductsHome products={allFeaturedProducts}/>
-      </div>
+        <MDBRow>
+          <MDBCol size={"12"} className={"mt-4"}>
+            <div className={"p-2 m-2 z-depth-1 rounded mb-0"}>
+              <h1 className={"text-center py-3"}>Featured Products</h1>
+              <ProductsHome products={allFeaturedProducts}/>
+            </div>
+          </MDBCol>
+        </MDBRow>
+      </>
     )//content to be rendered after page load
   }
 }
 
-export default withApp({ssr: true})(
-  graphql(HOME_QUERIES)(Home)
-);
+export default withApollo()(
+  withApp(graphql(HOME_QUERIES)(Home))
+)

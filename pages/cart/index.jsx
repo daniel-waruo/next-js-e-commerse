@@ -7,6 +7,7 @@ import {cartQuery, removeFromCart, updateCart} from '../../components/cart/queri
 import {APP_QUERY} from "../../components/app/queries";
 import {SpinnerLoader} from '../../components/global/index';
 import {withApp} from '../../components/app/index'
+import {withApollo} from "../../lib/apollo";
 
 
 class CartPage extends React.Component {
@@ -131,11 +132,13 @@ class CartPage extends React.Component {
   }
 }
 
-const withApollo = compose(
+const queries = compose(
   graphql(cartQuery),
   graphql(removeFromCart, {name: 'removeFromCart'}),
   graphql(updateCart, {name: 'updateCart'})
 );
 
 
-export default withApp({ssr: false})(withApollo(CartPage));
+export default withApollo()(
+  withApp(queries(CartPage))
+);

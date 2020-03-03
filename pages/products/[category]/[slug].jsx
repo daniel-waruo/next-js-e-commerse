@@ -6,11 +6,12 @@ import Rating from "react-rating";
 import {graphql} from 'react-apollo';
 import compose from "lodash.flowright";
 
-import {PRODUCT_QUERIES} from '../../components/product/queries.jsx';
-import {SpinnerLoader} from '../../components/global';
-import {CarouselProduct} from '../../components/product/components';
+import {PRODUCT_QUERIES} from '../../../components/product/queries.jsx';
+import {SpinnerLoader} from '../../../components/global';
+import {CarouselProduct} from '../../../components/product/components';
 import {withRouter} from 'next/router'
-import {withApp} from "../../components/app/index";
+import {withApp} from "../../../components/app/index";
+import {withApollo} from "../../../lib/apollo";
 
 
 class Product extends React.Component {
@@ -91,18 +92,16 @@ function getProductSlug(props) {
   return props.router.query.slug
 }
 
-const withApollo = compose(
-  graphql(
-    PRODUCT_QUERIES,
-    {
-      options: (props) => ({variables: {productSlug: getProductSlug(props)}})
-    }
-  )
-);
 
-
-export default withApp({ssr:true})(
+export default withApollo()(withApp(
   withRouter(
-    withApollo(Product))
-);
+    compose(
+      graphql(
+        PRODUCT_QUERIES,
+        {
+          options: (props) => ({variables: {productSlug: getProductSlug(props)}})
+        }
+      )
+    )(Product))
+));
   

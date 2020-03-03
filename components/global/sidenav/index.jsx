@@ -22,5 +22,15 @@ class SideNav extends React.Component {
     )
   }
 }
-
+class SideMenu extends React.Component{
+  render(){
+    const divStyling = {
+      position:"relative",
+    };
+    return (
+      <div className={"f-100 bg-dark"}>
+      </div>
+    )
+  }
+}
 export {SideNav};

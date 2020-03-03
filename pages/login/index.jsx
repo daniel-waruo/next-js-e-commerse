@@ -1,5 +1,5 @@
 import React from 'react';
-import {Redirect} from 'react-router-dom';
+import Router from 'next/router';
 import {graphql} from 'react-apollo';
 import compose from 'lodash.flowright';
 import {SpinnerLoader} from "../../components/global/index";
@@ -7,6 +7,7 @@ import {LoginForm} from "../../components/login/components";
 import {login, loginErrors} from '../../components/login/queries';
 import {APP_QUERY} from '../../components/app/queries'
 import {withApp} from '../../components/app/index'
+import {withApollo} from "../../lib/apollo";
 
 class Login extends React.Component {
   constructor(props) {
@@ -43,7 +44,7 @@ class Login extends React.Component {
     //TODO : implement next 
     if (user) {
       // redirect to home if there is user
-      return <Redirect to={"/"}/>
+      Router.push('/')
     }
     // return login form for rendering 
 
@@ -55,11 +56,10 @@ class Login extends React.Component {
   }
 }
 
-const withApollo = compose(
-  graphql(loginErrors),
-  graphql(login, {name: 'login'})
-);
-
-export default withApp({ssr:false})(
-  withApollo(Login)
+export default withApollo()(
+  withApp(
+    compose(
+      graphql(loginErrors),
+      graphql(login, {name: 'login'})
+    )(Login))
 );

@@ -1,25 +1,26 @@
 import React from 'react'
 import {MDBBtn, MDBContainer} from 'mdbreact'
 import './index.css'
-import {ProductView, RangeSlider, SideNav} from "../../components/global"
-import {PRODUCTS_QUERY} from '../../components/products/queries'
+import {ProductView, RangeSlider, SideNav} from "../../../components/global"
+import {PRODUCTS_QUERY} from '../../../components/products/queries'
 import compose from 'lodash.flowright';
 import {graphql} from "react-apollo";
-import {CategoryFilter, SearchForm} from "../../components/products/components";
+import {CategoryFilter, SearchForm} from "../../../components/products/components";
 import {withRouter} from "next/router"
-import {withApp} from "../../components/app/index";
-import {withApollo} from "../../lib/apollo";
+import {withApp} from "../../../components/app/index";
+import {withApollo} from "../../../lib/apollo";
 
 class ProductsPage extends React.Component {
 
   constructor(props) {
     super(props);
     // get categories from query string
-    const {categories} = props.router.query;
+    const {category} = props.router.query;
     // set initial state
+
     this.state = {
       sideNavOpen: false,
-      categories: categories || [],
+      categories: [category] || [],
     }
   }
 
@@ -71,22 +72,17 @@ class ProductsPage extends React.Component {
       marginLeft: (this.state.sideNavOpen) ? 250 : 0,
       transition: "margin-left .5s",
     };
+    const {query:{category}} = this.props.router ;
     return (
       <div className={"page"}>
         <MDBContainer fluid>
           <SideNav toggleFunction={this.toggleSideNav} isOpen={this.state.sideNavOpen}>
-            <div className={"h3 nav-link text-white text-center"}>Filters</div>
-            <div className={"text-white"}>
-              <RangeSlider title={"Price"} min={1} max={10} step={1}/>
-              <CategoryFilter data={this.props.data} updateFilter={this.updateFilter}
-                              categories={this.state.categories}/>
-              <MDBBtn style={{bottom: 0}} onClick={this.applyFilters} className={"fixed-bottom"}>APPLY FILTERS</MDBBtn>
-            </div>
+            <div className={"h3 nav-link text-white text-center"}>Filters {category}</div>
           </SideNav>
         </MDBContainer>
         <div style={divStyle} className={"sidenav-main"}>
           <MDBContainer>
-            <h1 className={"text-center h-100"}>Products</h1>
+            <h1 className={"text-center h-100"}>{category}</h1>
             <SearchForm toggleSideNav={this.toggleSideNav}/>
             <ProductView data={this.props.data}/>
           </MDBContainer>
@@ -98,10 +94,10 @@ class ProductsPage extends React.Component {
 
 const getVariables = props => {
   // get the categories and query from parsed query string object
-  const {categories, query} = props.router.query;
+  const {query:{ query,category }} = props.router;
   // return query variables
   return {
-    ids: categories || [],
+    slugs:[category],
     query: query
   }
 };

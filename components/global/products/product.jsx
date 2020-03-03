@@ -27,7 +27,7 @@ class ProductCard extends React.Component {
     const productImage = product.images[0].image;
 
     return (
-      <MDBCard cascade color="transparent">
+      <MDBCard cascade color="transparent" className={this.props.className}>
         <MDBCardImage cascade className="img-fluid" src={productImage + "-/scale_crop/500x500/smart/"}/>
         <MDBCardBody cascade className="p-1" color="transparent">
           <MDBCardText>
@@ -47,7 +47,7 @@ class ProductCard extends React.Component {
           </h5>
         </MDBCardBody>
         <div className="position-absolute text-center h-50 w-100">
-          <Link href={"/products/[slug]"} as={`/products/${product.slug}`}>
+          <Link href={"/products/[category]/[slug]"} as={`/products/${product.category.slug}/${product.slug}`}>
             <a style={{top: '40%'}}
                className="btn btn-secondary deep-blue-gradient"
             >MORE INFORMATION</a>

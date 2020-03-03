@@ -24,6 +24,9 @@ query {
         images {
           image
         }
+        category{
+          slug
+        }
         slug
       }
     }

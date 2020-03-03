@@ -26,11 +26,11 @@ class SearchForm extends React.Component {
     event.preventDefault();
     // call search function
     Router.push({
-        pathname:"/products",
-        query:{
-          query:this.state.value
-        }
-      });
+      pathname: "/products",
+      query: {
+        query: this.state.value
+      }
+    });
     // search(this.props.history, this.props.location, this.state.value);
   }
 
@@ -59,27 +59,25 @@ class SearchForm extends React.Component {
 
   render() {
     return (
-      <MDBNavbarNav left>
-        <MDBNavItem>
-          <form onSubmit={this.handleSubmit} className="nav-item form-inline">
-            <MDBCollapse
-              id={"searchFormCollapse"}
-              isOpen={this.state.collapseOpen}
-            >
-              <MDBInput
-                containerClass="my-1"
-                label="Search for Products"
-                arialabel="Search for Products"
-                onChange={this.handleChange}
-                validate
-                required
-                value={this.state.value}
-              />
-            </MDBCollapse>
-            <MDBIcon icon="search" className={"hoverable"} onClick={this.toggleSearch}>
-            </MDBIcon>
-          </form>
-        </MDBNavItem>
+      <MDBNavbarNav left >
+        <form onSubmit={this.handleSubmit} className="nav-item form-inline" >
+          <MDBCollapse
+            id={"searchFormCollapse"}
+            isOpen={this.state.collapseOpen}
+          >
+            <MDBInput
+              containerClass="my-1"
+              label="Search for Products"
+              arialabel="Search for Products"
+              onChange={this.handleChange}
+              validate
+              required
+              value={this.state.value}
+            />
+          </MDBCollapse>
+          <MDBIcon icon="search" className={"hoverable"} onClick={this.toggleSearch}>
+          </MDBIcon>
+        </form>
       </MDBNavbarNav>
     );
   }

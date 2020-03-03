@@ -8,6 +8,7 @@ import {RegisterForm} from '../../components/register/components';
 import {register, registerErrors} from '../../components/register/queries'
 
 import {withApp} from "../../components/app/index";
+import {withApollo} from "../../lib/apollo";
 
 
 class Register extends React.Component {
@@ -58,11 +59,9 @@ class Register extends React.Component {
 }
 
 
-const withApollo = compose(
-  graphql(registerErrors),
-  graphql(register, {name: 'register'})
-);
-
-export default withApp({ssr:false})(
-  withApollo(Register)
-);
+export default withApollo()(withApp(
+  compose(
+    graphql(registerErrors),
+    graphql(register, {name: 'register'})
+  )(Register)
+));

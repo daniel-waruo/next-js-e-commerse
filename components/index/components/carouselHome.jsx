@@ -1,6 +1,6 @@
 import React from 'react';
-import {MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBCol, MDBMask, MDBView} from "mdbreact";
-import { carouselImageStyle } from "../../../_helpers";
+import {MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBMask, MDBView} from "mdbreact";
+import {carouselImageStyle} from "../../../_helpers";
 
 function CarouselHome(props) {
   let carouselList = props.objects.map(
@@ -19,23 +19,22 @@ function CarouselHome(props) {
       )
     }
   );
-  
+
   return (
-    <MDBCol md={"12"} className="mx-auto px-2">
-      <MDBCarousel
-        activeItem={1}
-        length={carouselList.length}
-        showControls={true}
-        showIndicators={true}
-        slide={true}
-        mobileGesture={true}
-        onHoverStop={true}
-      >
-        <MDBCarouselInner>
-          {carouselList}
-        </MDBCarouselInner>
-      </MDBCarousel>
-    </MDBCol>
+    <MDBCarousel
+      activeItem={1}
+      length={carouselList.length}
+      showControls={true}
+      showIndicators={true}
+      slide={true}
+      mobileGesture={true}
+      onHoverStop={true}
+    >
+      <MDBCarouselInner>
+        {carouselList}
+      </MDBCarouselInner>
+    </MDBCarousel>
+
   );
 }
 

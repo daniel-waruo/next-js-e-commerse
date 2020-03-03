@@ -1,8 +1,8 @@
 import gql from "graphql-tag";
 
 export const PRODUCTS_QUERY = gql`
-query FilterProducts($ids:[String],$query:String){
-  filterProducts(query:$query,categoryIds:$ids) {
+query FilterProducts($ids:[String],$slugs:[String],$query:String){
+  filterProducts(query:$query,categoryIds:$ids,categorySlugs:$slugs) {
     edges {
       node {
           id
@@ -13,6 +13,9 @@ query FilterProducts($ids:[String],$query:String){
           description
           images {
             image
+          }
+          category{
+            slug
           }
           slug
       }
