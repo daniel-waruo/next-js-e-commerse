@@ -1,7 +1,6 @@
 import React from "react";
-import {MDBBtn, MDBCol, MDBIcon, MDBInputGroup, MDBModal, MDBRow} from "mdbreact";
-import Rating from "react-rating";
-
+import {MDBCol, MDBIcon, MDBModal, MDBRow,MDBBtn} from "mdbreact";
+import DialogPanel from './dialogPanel'
 import {graphql, Query} from 'react-apollo';
 import compose from 'lodash.flowright'
 
@@ -55,7 +54,6 @@ class ProductDialog extends React.Component {
     };
 
     if (isVisible === true) {
-
       return (
         <Query query={PRODUCT_QUERIES} variables={{productID: productID}}>
           {({data, loading, error}) => {
@@ -67,65 +65,42 @@ class ProductDialog extends React.Component {
                 (image) => image.image
               );
             return (
-              <MDBModal isOpen={isVisible} toggle={this.toggle} className={"my-3"} size="fluid" centered>
-                <MDBRow className={"p-1"}>
-                  <MDBCol size={"12"} lg={"7"}>
-                    <CarouselProduct objects={productImages} heightClass={"f-85"}/>
-                  </MDBCol>
-                  <MDBCol size={"12"} lg={"5"}>
-                    <div className={"mx-2"}>
-                      <h1>{product.name}</h1>
-                      <p>{product.description}</p>
-                      <Rating
-                        initialRating={2}
-                        readonly
-                        emptySymbol="fa fa-star fa-2x text-light"
-                        fullSymbol="fa fa-star fa-2x yellow-text"
-                      />
-                      <h5 className={"m-1"}>
-                        {product.discountPrice}
-                        <del className="ml-2 grey-text">{product.price}</del>
-                      </h5>
+              <MDBModal
+                isOpen={isVisible}
+                toggle={this.toggle}
+                className={"my-3"}
+                size="fluid" centered
+                contentClassName={"rgba-black-strong text-light"}
 
-                      <MDBInputGroup material containerClassName="mb-3 mt-0 w-50"
-                                     size={"lg"}
-                                     type="number"
-                                     valueDefault={1}
-                                     min={1}
-                                     max={1000000}
-                                     hint="Number of Products"
-                                     prepend={
-                                       "Quantity"
-                                     }
-                                     onChange={this.handleChange}
-                      />
-                      <MDBRow>
-                        <MDBCol md={"6"}>
-                          <MDBBtn className="aqua-gradient rounded float-right w-100" onClick={addToCart}>
-                            <MDBIcon icon="cart-plus" className={"float-left"} size={"2x"}/>
-                            <span className={"h6"}>ADD TO CART</span>
-                          </MDBBtn>
-                        </MDBCol>
-                        <MDBCol md={"6"}>
-                          <MDBBtn className="blue-gradient-rgba rounded float-right w-100">
-                            <MDBIcon icon={"money-bill-alt"} className={"float-left"} size={"2x"}/>
-                            <span className={"h6"}>BUY NOW</span>
-                          </MDBBtn>
-                        </MDBCol>
-                      </MDBRow>
-                      <MDBRow className={"justify-content-center"}>
-                        <MDBCol size={"12"} md={"7"}>
-                          <MDBBtn className="blue-gradient-rgba rounded float-right w-100 ">
-                            <MDBIcon icon="plus-circle" className={"float-left"} size={"2x"}/>
-                            <span className={"h6"}>MORE INFORMATION</span>
-                          </MDBBtn>
-                        </MDBCol>
-                      </MDBRow>
-                      <MDBBtn color={"warning"} onClick={this.props.removeDialog} className={"my-3 float-right"}>
-                        CLOSE
-                      </MDBBtn>
+              >
+                <MDBRow >
+                  <MDBCol size={"12"} lg={"7"}>
+                    <div className={"z-depth-1 rounded m-1"}>
+                      <CarouselProduct objects={productImages} heightClass={"f-85"}/>
                     </div>
                   </MDBCol>
+                  <MDBCol size={"12"} lg={"5"} className={"m-auto"}>
+                    <div className={"z-depth-1 rounded m-1 py-3"}>
+                      <DialogPanel
+                        product={product}
+                        handleChange={this.handleChange}
+                        addToCart={this.props.addToCart}
+                        removeDialog={this.props.removeDialog}/>
+                    </div>
+                  </MDBCol>
+                  <MDBBtn
+                    onClick={this.toggle}
+                    style={{
+                      top: "0",
+                      right: "0",
+                      zIndex: "1051",
+                      opacity:"0.5"
+                    }}
+                    color={"white"}
+                    aria-label={"close"}
+                    className={"position-absolute rounded-pill"}>
+                    <MDBIcon size={"2x"} icon={"times"}/>
+                  </MDBBtn>
                 </MDBRow>
               </MDBModal>
             )

@@ -1,13 +1,13 @@
 import React from 'react';
 import {MDBCol, MDBContainer, MDBRow} from 'mdbreact';
-import {Cart, EmptyCart, OrderSummary} from "../../components/cart/components";
+import {Cart, EmptyCart, OrderSummary} from "../components/cart/components";
 import {graphql} from 'react-apollo';
 import compose from 'lodash.flowright';
-import {cartQuery, removeFromCart, updateCart} from '../../components/cart/queries'
-import {APP_QUERY} from "../../components/app/queries";
-import {SpinnerLoader} from '../../components/global/index';
-import {withApp} from '../../components/app/index'
-import {withApollo} from "../../lib/apollo";
+import {cartQuery, removeFromCart, updateCart} from '../components/cart/queries'
+import {APP_QUERY} from "../components/app/queries";
+import {SpinnerLoader} from '../components/global/index';
+import {withApp} from '../components/app/index'
+import {withApollo} from "../lib/apollo";
 
 
 class CartPage extends React.Component {

@@ -31,7 +31,11 @@ export const PRODUCT_QUERIES = gql`
         discountPrice
         description
         images {
-        image
+          image
+        }
+        slug
+        category{
+          slug
         }
     }
   }

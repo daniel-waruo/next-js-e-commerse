@@ -15,13 +15,13 @@ export default function LoginForm(props) {
       )
     }
     return null
-  }
+  };
   return (
     <>
       <MDBContainer>
         {nonFieldErrors()}
-        <MDBRow className="justify-content-center align-items-center h-100">
-          <MDBCol md="6" className={"rounded my-auto"}>
+        <MDBRow className="f-85">
+          <MDBCol md="6" className={"rounded m-auto"}>
             <form onSubmit={props.login}>
               <p className="h1 text-center mb-4">Log in</p>
               <div className="grey-text">

@@ -1,14 +1,14 @@
 import React from "react";
-import {SpinnerLoader} from "../../components/global/index";
+import {SpinnerLoader} from "../components/global/index";
 import {Redirect} from 'react-router-dom';
 
 import {graphql} from 'react-apollo';
 import compose from 'lodash.flowright';
-import {RegisterForm} from '../../components/register/components';
-import {register, registerErrors} from '../../components/register/queries'
+import {RegisterForm} from '../components/register/components';
+import {register, registerErrors} from '../components/register/queries'
 
-import {withApp} from "../../components/app/index";
-import {withApollo} from "../../lib/apollo";
+import {withApp} from "../components/app/index";
+import {withApollo} from "../lib/apollo";
 
 
 class Register extends React.Component {
@@ -59,7 +59,7 @@ class Register extends React.Component {
 }
 
 
-export default withApollo({ssr:true})(withApp(
+export default withApollo()(withApp(
   compose(
     graphql(registerErrors),
     graphql(register, {name: 'register'})

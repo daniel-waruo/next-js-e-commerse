@@ -2,12 +2,12 @@ import React from 'react';
 import Router from 'next/router';
 import {graphql} from 'react-apollo';
 import compose from 'lodash.flowright';
-import {SpinnerLoader} from "../../components/global/index";
-import {LoginForm} from "../../components/login/components";
-import {login, loginErrors} from '../../components/login/queries';
-import {APP_QUERY} from '../../components/app/queries'
-import {withApp} from '../../components/app/index'
-import {withApollo} from "../../lib/apollo";
+import {SpinnerLoader} from "../components/global/index";
+import {LoginForm} from "../components/login/components";
+import {login, loginErrors} from '../components/login/queries';
+import {APP_QUERY} from '../components/app/queries'
+import {withApp} from '../components/app/index'
+import {withApollo} from "../lib/apollo";
 
 class Login extends React.Component {
   constructor(props) {
@@ -56,7 +56,7 @@ class Login extends React.Component {
   }
 }
 
-export default withApollo({ssr:true})(
+export default withApollo()(
   withApp(
     compose(
       graphql(loginErrors),

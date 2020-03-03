@@ -53,6 +53,6 @@ class Home extends React.Component {
   }
 }
 
-export default withApollo({ssr:true})(
+export default withApollo()(
   withApp(graphql(HOME_QUERIES)(Home))
 )

@@ -82,7 +82,7 @@ class ProductsPage extends React.Component {
         </MDBContainer>
         <div style={divStyle} className={"sidenav-main"}>
           <MDBContainer>
-            <h1 className={"text-center h-100"}>{category}</h1>
+            <h1 className={"text-center text-capitalize h-100"}>{category}</h1>
             <SearchForm toggleSideNav={this.toggleSideNav}/>
             <ProductView data={this.props.data}/>
           </MDBContainer>
