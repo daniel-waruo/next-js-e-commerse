@@ -93,7 +93,7 @@ function getProductSlug(props) {
 }
 
 
-export default withApollo()(withApp(
+export default withApollo({ssr: true})(withApp(
   withRouter(
     compose(
       graphql(

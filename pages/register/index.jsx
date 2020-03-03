@@ -59,7 +59,7 @@ class Register extends React.Component {
 }
 
 
-export default withApollo()(withApp(
+export default withApollo({ssr:true})(withApp(
   compose(
     graphql(registerErrors),
     graphql(register, {name: 'register'})

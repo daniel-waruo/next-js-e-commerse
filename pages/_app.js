@@ -1,5 +1,4 @@
 // IMPORT MDBOOTSTRAP CSS
-
 import '../css/dist/all.min.css';
 import '../css/dist/style.css'
 

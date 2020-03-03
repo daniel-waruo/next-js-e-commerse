@@ -56,7 +56,7 @@ class Login extends React.Component {
   }
 }
 
-export default withApollo()(
+export default withApollo({ssr:true})(
   withApp(
     compose(
       graphql(loginErrors),

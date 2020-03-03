@@ -1,5 +1,5 @@
-import React from 'react'
-import {MDBCol, MDBContainer, MDBRow} from 'mdbreact'
+import React from 'react';
+import {MDBCol, MDBContainer, MDBRow} from 'mdbreact';
 import {Cart, EmptyCart, OrderSummary} from "../../components/cart/components";
 import {graphql} from 'react-apollo';
 import compose from 'lodash.flowright';
