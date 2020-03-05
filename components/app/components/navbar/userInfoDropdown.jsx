@@ -47,7 +47,7 @@ class UserInfoDropdown extends React.Component {
             alt=""
           />
         </MDBDropdownToggle>
-        <MDBDropdownMenu className="dropdown-default">
+        <MDBDropdownMenu className="dropdown-default" style={{}}>
           {dropDownItems()}
         </MDBDropdownMenu>
       </MDBDropdown>

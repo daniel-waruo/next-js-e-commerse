@@ -15,7 +15,7 @@ const httpLink = new HttpLink({
   ssr: true,
   uri: GRAPHQL_ENDPOINT,
   credentials: 'include',
-  connectToDevTools: false,
+  connectToDevTools: true,
   queryDeduplication: true,
 });
 

@@ -22,7 +22,7 @@ const style = (
   </style>
 );
 
-class CategoryMenuLinks extends React.Component {
+class CategoryMenuLinks extends React.PureComponent {
 
   render() {
     // get the category objects passed in the props

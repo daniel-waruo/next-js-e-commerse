@@ -6,7 +6,7 @@ import UserInfoDropdown from "./userInfoDropdown";
 import Link from 'next/link'
 
 const style = (
-  <style jsx>
+  <style>
     {`
       @media (max-width: 991.98px) {
         .nav-row-width{

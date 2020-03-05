@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import {graphql} from 'react-apollo'
 import gql from 'graphql-tag';
@@ -7,7 +7,6 @@ import {APP_QUERY} from './queries'
 
 import {MainNavbar, ProductDialog} from "./components/index";
 import {MainFooter, SpinnerLoader} from '../global/index'
-import fetch from 'isomorphic-unfetch';
 
 // IMPORT MD BOOTSTRAP CSS
 // use during build
@@ -15,13 +14,11 @@ import fetch from 'isomorphic-unfetch';
 // uncomment during dev
 // import './index.scss'
 
-global.fetch = fetch;
-
-class App extends Component {
+class App extends React.Component {
 
   render() {
     const mainStyle = {
-      paddingTop:"0.75rem",
+      paddingTop: "0.75rem",
       paddingBottom: "5rem",
       minHeight: '90vh',
       marginRight: 1,

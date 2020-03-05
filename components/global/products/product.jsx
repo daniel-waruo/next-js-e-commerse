@@ -1,5 +1,5 @@
 import React from 'react';
-import {MDBCard, MDBCardBody, MDBCardImage, MDBCardText} from "mdbreact";
+import {MDBCard, MDBCardBody, MDBCardImage} from "mdbreact";
 import Rating from "react-rating";
 import gql from 'graphql-tag';
 import {graphql} from "react-apollo";
@@ -32,20 +32,18 @@ class ProductCard extends React.Component {
       <MDBCard cascade color="transparent" onClick={() => this.addToCart()} className={this.props.className}>
         <MDBCardImage cascade className="img-fluid" src={productImage + "-/scale_crop/500x500/smart/"}/>
         <MDBCardBody cascade className="p-1" color="transparent">
-          <MDBCardText>
-            <div className={"text-center"}>
-              <h5 className={"text-capitalize pb-2 text-"}>{product.name}</h5>
-              <h6>
-                {product.discountPrice}
-                <del className="ml-2 grey-text">{product.price}</del>
-              </h6>
-              <Rating
-                initialRating={2}
-                readonly
-                emptySymbol="fa fa-star text-light"
-                fullSymbol="fa fa-star yellow-text"/>
-            </div>
-          </MDBCardText>
+          <div className={"text-center card-text"}>
+            <h5 className={"text-capitalize pb-2 text-"}>{product.name}</h5>
+            <h6>
+              {product.discountPrice}
+              <del className="ml-2 grey-text">{product.price}</del>
+            </h6>
+            <Rating
+              initialRating={2}
+              readonly
+              emptySymbol="fa fa-star text-light"
+              fullSymbol="fa fa-star yellow-text"/>
+          </div>
         </MDBCardBody>
       </MDBCard>
     )
