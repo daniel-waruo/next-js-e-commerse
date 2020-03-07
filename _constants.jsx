@@ -1,4 +1,4 @@
-export const API_URL = 'https://next-js-e-commerse.now.sh';
+export const API_URL = 'http://develop-api.herokuapp.com';
 
 export const GRAPHQL_ENDPOINT = `${API_URL}/graph-ql`;
 /******************************
