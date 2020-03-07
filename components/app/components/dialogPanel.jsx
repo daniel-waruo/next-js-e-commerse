@@ -20,7 +20,8 @@ export default props => {
         emptySymbol="fa fa-star fa-2x text-light"
         fullSymbol="fa fa-star fa-2x yellow-text"
       />
-      <MDBInputGroup material containerClassName="mb-3 mt-0 w-50"
+      <MDBInputGroup material
+                     containerClassName="mb-3 mt-0 w-50"
                      prependClassNames={"text-white"}
                      className={"text-light"}
                      size={"lg"}

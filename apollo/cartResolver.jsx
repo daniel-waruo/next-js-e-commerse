@@ -53,16 +53,16 @@ export default {
     const data = {
       products: args.products
     };
-    // send a login request to the server
+    // send a request to the server to update the products
     await request.post({
-      url: UPDATE_CART, // registration url
+      url: UPDATE_CART, // update cart URL's
       data: data, // data to be sent to the server
       success: data => {
         // set success as true
         success = true;
       },// if the request was successful call the function
       error: error => {
-        // write the registration errors on the cache
+        // console log the errors on the console for error handling analysis
         console.error(error)
       }
     });

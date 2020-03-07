@@ -34,15 +34,10 @@ class ProductDialog extends React.Component {
       })
     }
   };
-
-  render() {
-    const isVisible = this.props.isVisible,
-      productID = this.props.productID
-    ;
-    const addToCart = () => {
+  addToCart = () => {
       this.props.addToCart({
         variables: {
-          productID: productID,
+          productID: this.props.productID,
           productNumber: this.state.product.number
         },
         refetchQueries: [{query: APP_QUERY}],
@@ -52,6 +47,11 @@ class ProductDialog extends React.Component {
         }
       )
     };
+  render() {
+    const isVisible = this.props.isVisible,
+      productID = this.props.productID
+    ;
+
 
     if (isVisible === true) {
       return (
@@ -84,7 +84,7 @@ class ProductDialog extends React.Component {
                       <DialogPanel
                         product={product}
                         handleChange={this.handleChange}
-                        addToCart={this.props.addToCart}
+                        addToCart={this.addToCart}
                         removeDialog={this.props.removeDialog}/>
                     </div>
                   </MDBCol>
