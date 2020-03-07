@@ -4,9 +4,9 @@ import {graphql} from 'react-apollo';
 import compose from 'lodash.flowright';
 import {SpinnerLoader} from "../components/global/index";
 import {LoginForm} from "../components/login/components";
-import {login, loginErrors} from '../components/login/queries';
-import {APP_QUERY} from '../components/app/queries'
-import {withApp} from '../components/app/index'
+import {login, loginErrors, socialLogin} from '../components/login/queries';
+import {APP_QUERY} from '../components/app/queries';
+import {withApp} from '../components/app/index';
 import {withApollo} from "../lib/apollo";
 
 class Login extends React.Component {
@@ -35,6 +35,7 @@ class Login extends React.Component {
   };
 
   render() {
+    console.log(this.props);
     // get loginErrors and the user from the props
     const {data: {loginErrors, user}, loading} = this.props;
     // if still loading show spinner loader
@@ -50,7 +51,11 @@ class Login extends React.Component {
 
     return (
       <div className={"page"}>
-        <LoginForm onChange={this.onChange} login={this.login} loginErrors={loginErrors} loading={false}/>
+        <LoginForm onChange={this.onChange}
+                   socialLogin={this.props.socialLogin}
+                   login={this.login}
+                   loginErrors={loginErrors}
+                   loading={false} />
       </div>
     )
   }
@@ -60,6 +65,7 @@ export default withApollo()(
   withApp(
     compose(
       graphql(loginErrors),
-      graphql(login, {name: 'login'})
+      graphql(login, {name: 'login'}),
+      graphql(socialLogin, {name: 'socialLogin'})
     )(Login))
 );

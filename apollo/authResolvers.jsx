@@ -66,5 +66,30 @@ export default {
     });
     // return null
     return success;
+  },
+  socialLogin: async (obj, args, {cache}, info) => {
+
+    await request.post({
+      url: args.url,
+      data: {
+        access_token: args.accessToken
+      },
+      success: data => {
+        // store token in local storage
+        // FIXME : stop using localStorage to store tokens
+        if (typeof localStorage != "undefined") {
+          localStorage.setItem("token", data.token);
+        }
+      },
+      error: error => {
+        // write the error on the cache
+        // TODO: Create a Login Type with status and errors on it
+        cache.writeData({
+          data: {
+            loginErrors: parseError(error)
+          }
+        })
+      }
+    });
   }
 }

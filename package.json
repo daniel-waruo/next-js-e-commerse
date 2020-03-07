@@ -27,7 +27,7 @@
     "react-dom": "^16.13.0",
     "react-facebook-login": "^4.1.1",
     "react-google-login": "^5.1.1",
-    "react-instagram-login": "latest",
+    "react-instagram-login": "github:daniel-waruo/react-instagram-login#master",
     "react-rating": "^2.0.4",
     "react-twitter-auth": "0.0.13"
   },

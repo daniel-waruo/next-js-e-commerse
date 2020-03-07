@@ -17,6 +17,7 @@ export default function LoginForm(props) {
     }
     return null
   };
+  console.log(props);
   return (
     <>
       <MDBContainer>
@@ -24,7 +25,7 @@ export default function LoginForm(props) {
         <MDBRow>
           <MDBCol md="6" className={"rounded m-auto"}>
             <div className={"rounded z-depth-1 p-3"}>
-              <SocialLogin/>
+              <SocialLogin socialLogin={props.socialLogin}/>
               <form onSubmit={props.login}>
                 <p className="h1 text-center mb-4 grey-text">Log in </p>
                 <div className="grey-text">

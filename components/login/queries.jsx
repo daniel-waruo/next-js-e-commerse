@@ -21,4 +21,10 @@ loginErrors=gql`
       username
     }
   }
-`;
+`,
+  socialLogin=gql`
+  mutation SocialLogin($url:String!,$accessToken:String!){
+    socialLogin(url:$url,accessToken:$accessToken)@client
+  }
+  `
+;

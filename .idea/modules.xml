@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../e-commerse-api/.idea/e_commerce.iml" filepath="$PROJECT_DIR$/../e-commerse-api/.idea/e_commerce.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../gram/.idea/gram.iml" filepath="$PROJECT_DIR$/../gram/.idea/gram.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/next-js-e-commerse.iml" filepath="$PROJECT_DIR$/.idea/next-js-e-commerse.iml" />
     </modules>
   </component>

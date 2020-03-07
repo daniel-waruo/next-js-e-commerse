@@ -21,6 +21,7 @@ export default gql`
         removeProductDialog : Boolean
         
         login(email:String! ,password:String) : Boolean
+        socialLogin(url:String!,accessToken:String!) : Boolean
         register(
             email:String! ,
             username:String!,

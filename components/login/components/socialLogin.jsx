@@ -3,20 +3,44 @@ import {MDBBtn, MDBIcon} from 'mdbreact';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
 import {GoogleLogin} from 'react-google-login';
 import InstagramLogin from 'react-instagram-login';
-import {CLIENT_IDS} from "../../../_constants";
+import {CLIENT_IDS, FACEBOOK_LOGIN_URL, GOOGLE_LOGIN_URL, INSTAGRAM_LOGIN_URL} from "../../../_constants";
+import {loginErrors} from '../../../components/login/queries';
 
 const {facebook, instagram, google} = CLIENT_IDS;
 
+const refetchQueries = [
+  {query: loginErrors},
+];
 
 class SocialLogin extends React.PureComponent {
-  responseGoogle = response => {
-    console.log("Google response", response)
+  responseGoogle = async response => {
+    console.log("Google response", response);
+    await this.props.socialLogin({
+      variables: {
+        url: GOOGLE_LOGIN_URL,
+        accessToken: response.accessToken
+      },
+      refetchQueries: refetchQueries
+    });
   };
-  responseFacebook = response => {
-    console.log("Facebook response", response)
+  responseFacebook = async response => {
+    console.log("Facebook response", response);
+    await this.props.socialLogin({
+      variables: {
+        url: FACEBOOK_LOGIN_URL,
+        accessToken: response.accessToken
+      },
+      refetchQueries: refetchQueries
+    });
   };
-  responseInstagram = response => {
-    console.log("Instagram response", response)
+  responseInstagram = async response => {
+    await this.props.socialLogin({
+      variables: {
+        url: INSTAGRAM_LOGIN_URL,
+        accessToken: response
+      },
+      refetchQueries: refetchQueries
+    });
   };
 
   render() {

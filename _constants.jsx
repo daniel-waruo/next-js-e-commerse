@@ -11,7 +11,7 @@ export const LOGOUT_URL = `${API_URL}/accounts/auth/logout/`;
 export const REGISTER_URL = `${API_URL}/accounts/auth/registration/`;
 
 /******************************
- * CART API ENDPOINTS
+ *     CART API ENDPOINTS     *
  ******************************/
 export const ADD_TO_CART_URL = `${API_URL}/client/cart/product/add`;
 
@@ -30,3 +30,7 @@ export const CLIENT_IDS = {
   instagram: '26a72be8580d41f5adaf8fca106716fd',
   google: '188036970693-7iifjilp8gt7qbmg4ditqc0j6j06uu8q.apps.googleusercontent.com'
 };
+
+export const INSTAGRAM_LOGIN_URL = `${API_URL}/accounts/auth/social/instagram/`;
+export const GOOGLE_LOGIN_URL = `${API_URL}/accounts/auth/social/google/`;
+export const FACEBOOK_LOGIN_URL = `${API_URL}/accounts/auth/social/facebook/`;

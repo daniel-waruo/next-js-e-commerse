@@ -15,8 +15,8 @@ class UserInfoDropdown extends React.Component {
                 My account
               </a>
             </Link>
-            <Link href={"#"} onClick={this.props.logout} to="#">
-              <a className={"dropdown-item"}>
+            <Link href={"/"}>
+              <a className={"dropdown-item"} onClick={this.props.logout}>
                 Log out
               </a>
             </Link>
@@ -52,7 +52,6 @@ class UserInfoDropdown extends React.Component {
         </MDBDropdownMenu>
       </MDBDropdown>
     )
-
   }
 }
 
