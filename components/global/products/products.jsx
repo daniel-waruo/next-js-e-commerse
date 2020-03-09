@@ -17,7 +17,7 @@ class Products extends React.Component {
     // TODO;show error page
     if (error) return `Error! ${error.message}`;
     // get products from filterProducts
-    const products = filterProducts.edges;
+    const products = filterProducts.products.edges;
     // return rendered component
     return (
       <MDBRow>

@@ -9,6 +9,7 @@ import {CategoryFilter, SearchForm} from "../../components/products/components";
 import {withRouter} from "next/router"
 import {withApp} from "../../components/app/index";
 import {withApollo} from "../../lib/apollo";
+import SpinnerLoader from "../../components/global/loaders/spinnerLoader";
 
 class ProductsPage extends React.Component {
 
@@ -20,6 +21,10 @@ class ProductsPage extends React.Component {
     this.state = {
       sideNavOpen: false,
       categories: categories || [],
+      price: {
+        min: undefined,
+        max: undefined
+      }
     }
   }
 
@@ -30,7 +35,16 @@ class ProductsPage extends React.Component {
     )
   };
 
-  updateFilter = (id, value) => {
+  updatePriceFilter = (min, max) => {
+    this.setState({
+      price: {
+        max: max,
+        min: min
+      }
+    })
+  };
+
+  updateCategoryFilter = (id, value) => {
     // get categories from state
     const {categories} = this.state;
     // check if category is in category list
@@ -57,30 +71,43 @@ class ProductsPage extends React.Component {
     // call the filter function to push the filters to the url
     // get query
     let {query} = this.props.router;
-    query.categories = this.state.categories;
+    const {categories, price: {min, max}} = this.state;
+    query.categories = categories;
+
+    if (min !== undefined || max !== undefined) {
+      query.maxPrice = max;
+      query.minPrice = min;
+    }
     this.props.router.push({
       pathname: "/products",
       query: query
     })
-    //filter(this.props.history, this.props.location, this.state.categories)
   };
 
   render() {
     // div Styling
     const divStyle = {
-      marginLeft: (this.state.sideNavOpen) ? 250 : 0,
+      marginLeft: (this.state.sideNavOpen) ? 300 : 0,
       transition: "margin-left .5s",
     };
+    console.log(this.props.data);
+    const {data: {loading, error, filterProducts}} = this.props;
+
+    if (loading) return <SpinnerLoader/>;
+    if (error) return "Error";
+    const {filterPrice: {min, max}} = filterProducts;
     return (
-      <div className={"page"}>
+      <div className={"page overflow-hidden"}>
         <MDBContainer fluid>
           <SideNav toggleFunction={this.toggleSideNav} isOpen={this.state.sideNavOpen}>
             <div className={"h3 nav-link text-white text-center"}>Filters</div>
             <div className={"text-white"}>
-              <RangeSlider title={"Price"} min={1} max={10} step={1}/>
-              <CategoryFilter data={this.props.data} updateFilter={this.updateFilter}
+              <RangeSlider title={"Price"} min={min} max={max} minPrice={min} maxPrice={max} step={1}
+                           updateFilter={this.updatePriceFilter} data={this.props.data}/>
+              <CategoryFilter data={this.props.data} updateFilter={this.updateCategoryFilter}
                               categories={this.state.categories}/>
-              <MDBBtn style={{bottom: 0}} onClick={this.applyFilters} className={"fixed-bottom"}>APPLY FILTERS</MDBBtn>
+              <MDBBtn style={{bottom: 0}} onClick={this.applyFilters} className={"fixed-bottom m-auto"}>APPLY
+                FILTERS</MDBBtn>
             </div>
           </SideNav>
         </MDBContainer>
@@ -98,11 +125,13 @@ class ProductsPage extends React.Component {
 
 const getVariables = props => {
   // get the categories and query from parsed query string object
-  const {categories, query} = props.router.query;
+  const {categories, query, maxPrice, minPrice} = props.router.query;
   // return query variables
   return {
     ids: categories || [],
-    query: query
+    query: query,
+    maxPrice: maxPrice,
+    minPrice: minPrice
   }
 };
 

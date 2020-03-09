@@ -13,9 +13,14 @@ export const cartQuery = gql`
                 price
                 discountPrice
                 slug
+                category{
+                  slug
+                }
               }
               number
+              total
             }
+            total
         }
     }
 `;

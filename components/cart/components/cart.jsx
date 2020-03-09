@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import {MDBBtn, MDBIcon} from "mdbreact";
+import {MDBBtn, MDBIcon, MDBInput} from "mdbreact";
 
 
 export function CartItem(props) {
@@ -12,22 +12,28 @@ export function CartItem(props) {
   return (
     <tr className={"td-center"}>
       <td>
-        <Link href={"/"}>
-          <img src={props.image_url + "-/resize/100x100/"} alt={props.name} height={"100px"} width={"100px"}/>
+        <Link href={"/products/[category]/[slug]"}
+              as={`/products/${props.category}/${props.slug}`}>
+          <img
+            src={props.image_url + "-/resize/100x100/"}
+            alt={props.name}
+            height={"100px"}
+            className={"rounded-circle"}
+            width={"100px"}/>
         </Link>
       </td>
-      <td>
-        <Link href={"/"}>
+      <td className={"align-middle text-capitalize"}>
+        <Link href={"/products/[category]/[slug]"}
+              as={`/products/${props.category}/${props.slug}`}>
           <a>{props.name}</a>
         </Link>
       </td>
-      <td>
-        <input type="number" defaultValue={props.number} onChange={onChange} className="form-control"/>
+      <td className={"align-middle"}>
+        <MDBInput type={"number"} valueDefault={props.number} onChange={onChange}/>
       </td>
-      <td>{props.price}</td>
-      <td>{props.discount}</td>
-      <td>{props.total}</td>
-      <td>
+      <td className={"align-middle"}>{props.price}</td>
+      <td className={"align-middle"}>{props.total}</td>
+      <td className={"align-middle"}>
         <MDBBtn onClick={e => props.removeFromCart(props.id)} color={"warning"}>
           <MDBIcon icon={"trash"}/>
         </MDBBtn>
@@ -38,11 +44,12 @@ export function CartItem(props) {
 
 export function Cart(props) {
   // get the cart products data from props
-  const {cart: {products}} = props;
+  const {cart: {products, total}} = props;
+  console.log(props);
   // create cart items to render
-  const cartItems = products.map(({product, number}, key) => {
+  const cartItems = products.map(({product, number, total}, key) => {
     // get cart details from product object
-    const {id, name, images, price} = product;
+    const {id, name, images, slug, discountPrice, category} = product;
     // return cart item
     return (
       <CartItem
@@ -50,10 +57,11 @@ export function Cart(props) {
         image_url={images[0].image}
         name={name}
         id={id}
+        category={category.slug}
+        slug={slug}
         number={number}
-        price={price}
-        discount={0.0}
-        total={10 * number}
+        price={discountPrice}
+        total={total}
         removeFromCart={props.removeFromCart}
         handleChange={props.handleUpdate}
       />
@@ -72,7 +80,6 @@ export function Cart(props) {
             <th colSpan="2">Product</th>
             <th>Quantity</th>
             <th>Unit price</th>
-            <th>Discount</th>
             <th colSpan="2">Total</th>
           </tr>
           </thead>
@@ -80,7 +87,7 @@ export function Cart(props) {
           <tfoot>
           <tr>
             <th colSpan="5">Total</th>
-            <th colSpan="2">$446.00</th>
+            <th colSpan="2">{total}</th>
           </tr>
           </tfoot>
         </table>

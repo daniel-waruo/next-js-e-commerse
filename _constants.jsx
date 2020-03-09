@@ -1,5 +1,6 @@
 // TOD0:switch API_URL between development and production
-export const API_URL = 'https://develop-api.herokuapp.com';
+const dev = process.env.NODE_ENV !== 'production';
+export const API_URL = dev ? 'http://127.0.0.1:8000' : 'https://develop-api.herokuapp.com';
 
 export const GRAPHQL_ENDPOINT = `${API_URL}/graph-ql`;
 /******************************

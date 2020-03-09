@@ -1,11 +1,11 @@
 import React from 'react'
-import {MDBBtn, MDBContainer} from 'mdbreact'
+import {MDBContainer} from 'mdbreact'
 import './index.css'
-import {ProductView, RangeSlider, SideNav} from "../../../components/global"
+import {ProductView, SideNav} from "../../../components/global"
 import {PRODUCTS_QUERY} from '../../../components/products/queries'
 import compose from 'lodash.flowright';
 import {graphql} from "react-apollo";
-import {CategoryFilter, SearchForm} from "../../../components/products/components";
+import {SearchForm} from "../../../components/products/components";
 import {withRouter} from "next/router"
 import {withApp} from "../../../components/app/index";
 import {withApollo} from "../../../lib/apollo";
@@ -69,10 +69,10 @@ class ProductsPage extends React.Component {
   render() {
     // div Styling
     const divStyle = {
-      marginLeft: (this.state.sideNavOpen) ? 250 : 0,
+      marginLeft: (this.state.sideNavOpen) ? 300 : 0,
       transition: "margin-left .5s",
     };
-    const {query:{category}} = this.props.router ;
+    const {query: {category}} = this.props.router;
     return (
       <div className={"page"}>
         <MDBContainer fluid>
@@ -94,10 +94,10 @@ class ProductsPage extends React.Component {
 
 const getVariables = props => {
   // get the categories and query from parsed query string object
-  const {query:{ query,category }} = props.router;
+  const {query: {query, category}} = props.router;
   // return query variables
   return {
-    slugs:[category],
+    slugs: [category],
     query: query
   }
 };

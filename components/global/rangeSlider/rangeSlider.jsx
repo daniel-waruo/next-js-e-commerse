@@ -22,27 +22,31 @@ class RangeSlider extends Component {
     }
   }
 
-  onChange = (e) => {
+  onUpdate = (e) => {
     // set new state from change
     this.setState({
       min: e[0],
       max: e[1]
     })
   };
+  onChange = e => {
+    const min = e[0], max = e[1];
+    this.props.updateFilter(min, max)
+  };
 
   render() {
-    const {min, max} = this.props,
-      {minValue, maxValue} = this.state,
-      domain = [min, max],
-      defaultValues = [minValue, maxValue];
+    const {min, max, maxPrice, minPrice} = this.props,
+      domain = [minPrice, maxPrice],
+      defaultValues = [min, max];
 
     //TODO :style it better
     return (
       <>
         <style>{style}</style>
         <div className={"text-white px-4"}>
-          <p className={"py-1"}><span className={"h5 test-bold"}>{this.props.title}</span> | KSh {this.state.max} -
-            Ksh {this.state.min}</p>
+          <p className={"py-1"}>
+            <span className={"h5 test-bold"}>{this.props.title}</span>
+            | KSh {this.state.min} - Ksh {this.state.max}</p>
           <div style={{height: 50, width: "100%"}}>
             <Slider
               mode={1}
