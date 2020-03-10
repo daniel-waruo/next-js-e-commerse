@@ -6,22 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="38d6c4b7-e263-4646-a63b-27f18fe4d77f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apollo/cartResolver.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/apollo/cartResolver.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apollo/productResolver.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/apollo/productResolver.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apollo/typeDef.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/apollo/typeDef.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apolloClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/apolloClient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/app/components/dialogPanel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/app/components/dialogPanel.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/app/components/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/app/components/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/app/components/navbar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/app/components/navbar/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/app/components/navbar/userInfoDropdown.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/app/components/navbar/userInfoDropdown.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/app/components/productDialog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/app/components/productDialog.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/app/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/app/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/app/queries.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/app/queries.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/cart/components/cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/cart/components/cart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/login/components/socialLogin.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/login/components/socialLogin.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/product/queries.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/product/queries.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/products/[category]/[slug].jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/products/[category]/[slug].jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../react-instagram-login/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../react-instagram-login/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,38 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="cartAddDialog.jsx" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/components/app/components/cartAddDialog.jsx">
+      <file leaf-file-name="_app.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/_app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cart.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/cart.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="82">
-              <caret line="115" column="25" selection-start-line="115" selection-start-column="25" selection-end-line="115" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-                <element signature="e#700#1752#0" />
-                <element signature="e#1787#2393#0" />
-                <element signature="e#2416#2745#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cart.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/cart/components/cart.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="1" selection-end-line="2" />
+            <state relative-caret-position="238">
+              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -91,8 +49,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Python Script" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -148,7 +106,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../e-commerse-api/root/settings/components/allauth.py" />
         <option value="$PROJECT_DIR$/../django-rest-auth/rest_auth/helpers.py" />
         <option value="$PROJECT_DIR$/../e-commerse-api/root/settings/components/rest_framework.py" />
         <option value="$PROJECT_DIR$/../e-commerse-api/root/settings/components/apps.py" />
@@ -163,7 +120,6 @@
         <option value="$PROJECT_DIR$/apollo/authResolvers.jsx" />
         <option value="$PROJECT_DIR$/components/login/queries.jsx" />
         <option value="$PROJECT_DIR$/pages/login.jsx" />
-        <option value="$PROJECT_DIR$/pages/_app.js" />
         <option value="$PROJECT_DIR$/../e-commerse-api/requirements.txt" />
         <option value="$PROJECT_DIR$/../e-commerse-api/client/cart/api.py" />
         <option value="$PROJECT_DIR$/_constants.jsx" />
@@ -199,6 +155,8 @@
         <option value="$PROJECT_DIR$/components/app/components/productDialog.jsx" />
         <option value="$PROJECT_DIR$/pages/products/[category]/[slug].jsx" />
         <option value="$PROJECT_DIR$/components/app/components/cartAddDialog.jsx" />
+        <option value="$PROJECT_DIR$/pages/_document.js" />
+        <option value="$PROJECT_DIR$/pages/_app.js" />
       </list>
     </option>
   </component>
@@ -228,6 +186,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -238,31 +197,17 @@
             <path>
               <item name="next-js-e-commerse" type="b2602c69:ProjectViewProjectNode" />
               <item name="next-js-e-commerse" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="next-js-e-commerse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="next-js-e-commerse" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="next-js-e-commerse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="next-js-e-commerse" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="next-js-e-commerse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="next-js-e-commerse" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="next-js-e-commerse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="next-js-e-commerse" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -278,11 +223,14 @@
       <recent name="https://github.com/Tivix/django-rest-auth.git" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Dan\Documents\Work\next-js-e-commerse\public" />
+      <recent name="C:\Users\Dan\Documents\Work\next-js-e-commerse\static" />
       <recent name="C:\Users\Dan\Documents\Work\django-rest-auth\rest_auth" />
       <recent name="C:\Users\Dan\Documents\Work\next-js-e-commerse\pages" />
       <recent name="C:\Users\Dan\Documents\Work\next-js-e-commerse\pages\products\[category]" />
-      <recent name="C:\Users\Dan\Documents\Work\next-js-e-commerse\pages\products" />
-      <recent name="C:\Users\Dan\Documents\Work\next-js-e-commerse\pages\[category]" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Dan\Documents\Work\next-js-e-commerse\public" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -512,7 +460,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32838285" />
       <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.5015129" side_tool="true" weight="0.3679868" />
@@ -520,15 +467,15 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.19141914" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32838285" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.48679867" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49848714" visible="true" weight="0.0" />
-      <window_info anchor="bottom" id="TypeScript" order="13" weight="0.11881188" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2700454" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49848714" visible="true" weight="0.3580858" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27382752" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" weight="0.32980332" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39933994" />
+      <window_info anchor="bottom" id="TypeScript" order="13" weight="0.11881188" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -539,29 +486,29 @@
       <window_info anchor="bottom" id="Find" order="1" weight="0.7821782" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.19141914" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.48679867" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26626325" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32838285" />
       <window_info anchor="bottom" id="TypeScript" order="13" weight="0.11881188" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.7821782" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.48679867" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32838285" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39933994" />
-      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32980332" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49848714" visible="true" weight="0.09570957" />
       <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.5015129" side_tool="true" weight="0.3679868" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.19141914" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" id="Database" order="4" weight="0.32980332" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32838285" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.7821782" />
+      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -612,20 +559,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../e-commerse-api/utils/currency/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../e-commerse-api/client/products/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="15" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../e-commerse-api/business/products/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -792,9 +725,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -819,16 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/_app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#26#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_constants.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -840,9 +760,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -850,9 +767,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
           <caret line="57" column="18" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -867,9 +781,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="73" column="68" selection-start-line="73" selection-start-column="68" selection-end-line="73" selection-end-column="68" />
-          <folding>
-            <element signature="e#0#81#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -922,9 +833,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="332">
           <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -932,9 +840,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -949,9 +854,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -966,22 +868,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="82">
           <caret line="115" column="25" selection-start-line="115" selection-start-column="25" selection-end-line="115" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#700#1752#0" />
-            <element signature="e#1787#2393#0" />
-            <element signature="e#2416#2745#0" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/components/app/components/cartAddDialog.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="306">
+          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/_document.js" />
+    <entry file="file://$PROJECT_DIR$/public/static/React-icon.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/_app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
         </state>
       </provider>
     </entry>
