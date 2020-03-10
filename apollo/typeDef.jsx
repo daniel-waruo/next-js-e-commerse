@@ -9,9 +9,18 @@ export default gql`
         productID : String
         number : Int
     }
+    type ProductDialog{
+      visible: Boolean
+      productID : String
+    }
+    type CartDialog{
+      visible: Boolean
+      status : String
+      productName: String
+    }
     extend type Query {
-        addCartVisible : Boolean
-        addCartProductID : String
+        cartDialog : CartDialog
+        productDialog: ProductDialog
         userLoggedIn : User
         loginErrors : [Error]
         registerErrors : [Error]
@@ -19,6 +28,9 @@ export default gql`
     extend type Mutation {
         showProductDialog(productID:String! ) : Boolean
         removeProductDialog : Boolean
+        
+        showCartDialog(status:String!,productName:String!): Boolean
+        removeCartDialog : Boolean
         
         login(email:String! ,password:String) : Boolean
         socialLogin(url:String!,accessToken:String!) : Boolean

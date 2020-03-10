@@ -21,7 +21,7 @@ export default props => {
         fullSymbol="fa fa-star fa-2x yellow-text"
       />
       <MDBInputGroup material
-                     containerClassName="mb-3 mt-0 w-50"
+                     containerClassName="mb-3 mt-0 w-50 mx-auto"
                      prependClassNames={"text-white"}
                      className={"text-light"}
                      size={"lg"}
@@ -39,12 +39,6 @@ export default props => {
                      onChange={handleChange}
       />
       <MDBRow className={"px-2 py-2"}>
-        <MDBCol md={"12"} className={"mx-auto"}>
-          <MDBBtn className="blue-gradient-rgba rounded-pill">
-            <MDBIcon icon={"money-bill-alt"} className={"float-left"} size={"2x"}/>
-            <span className={"ml-2"}>BUY</span>
-          </MDBBtn>
-        </MDBCol>
         <MDBCol md={"12"} className={"mx-auto"}>
           <MDBBtn className="aqua-gradient rounded-pill" onClick={addToCart}>
             <MDBIcon icon="cart-plus" className={"float-left"} size={"2x"}/>

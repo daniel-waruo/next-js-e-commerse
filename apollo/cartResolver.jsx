@@ -9,6 +9,7 @@ export default {
       product_pk: parseInt(args.productID),
       product_number: args.productNumber
     };
+
     // send a login request to the server
     await request.post({
       url: ADD_TO_CART_URL, // registration url
@@ -68,5 +69,34 @@ export default {
     });
     // return null
     return success;
+  },
+  showCartDialog: (obj, args, {cache}, info) => {
+    // change apollo cache state to show the show the product dialog
+    cache.writeData({
+      data: {
+        cartDialog: {
+          __typename: 'CartDialog',
+          visible: true,
+          status: args.status,
+          productName: args.productName
+        }
+      }
+    });
+    return null;
+  },
+  removeCartDialog: (obj, args, {cache}, info) => {
+    // change apollo cache state to remove the product Dialog
+    cache.writeData({
+      data: {
+        cartDialog: {
+          __typename: 'CartDialog',
+          visible: false,
+          productID: null,
+          productName: null
+        }
+      }
+    });
+    return null;
   }
+
 }

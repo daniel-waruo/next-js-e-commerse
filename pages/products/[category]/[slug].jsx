@@ -12,9 +12,37 @@ import {CarouselProduct} from '../../../components/product/components';
 import {withRouter} from 'next/router'
 import {withApp} from "../../../components/app/index";
 import {withApollo} from "../../../lib/apollo";
+import {addToCart, APP_QUERY, removeCartDialog, showCartDialog} from "../../../components/app/queries";
 
 
 class Product extends React.Component {
+  state = {
+    number: 1
+  };
+  onChange = e => {
+    this.setState({number: e.target.value})
+  };
+  addToCart = () => {
+    const {data: {product: {id, inCart, name}}} = this.props;
+    if (inCart) {
+      this.props.addToCart({
+        variables: {
+          productID: id,
+          productNumber: this.state.number
+        },
+        refetchQueries: [
+          {query: APP_QUERY},
+          {query: PRODUCT_QUERIES}]
+      })
+    }
+    this.props.showCartDialog(
+      {
+        variables: {
+          status: !inCart ? 'success' : 'inCart',
+          productName: name
+        }
+      });
+  };
 
   render() {
     const {
@@ -62,10 +90,11 @@ class Product extends React.Component {
                 </div>
 
                 <MDBInputGroup material
-                               containerClassName="mb-3 mt-0 w-50"
+                               containerClassName="mb-3 mt-0 w-50 mx-auto"
                                size={"lg"}
                                type="number"
-                               valueDefault={1}
+                               valueDefault={this.state.number}
+                               onChange={this.onChange}
                                min={1}
                                max={10}
                                hint="Number of Products"
@@ -74,16 +103,10 @@ class Product extends React.Component {
                                }
                 />
                 <MDBRow>
-                  <MDBCol md={"6"}>
-                    <MDBBtn className="aqua-gradient rounded float-right w-100">
+                  <MDBCol md={"12"}>
+                    <MDBBtn className="aqua-gradient rounded float-right w-100" onClick={this.addToCart}>
                       <MDBIcon icon="cart-plus" className={"float-left"} size={"2x"}/>
                       <span className={"h6"}>ADD TO CART</span>
-                    </MDBBtn>
-                  </MDBCol>
-                  <MDBCol md={"6"}>
-                    <MDBBtn className="blue-gradient-rgba rounded float-right w-100">
-                      <MDBIcon icon={"money-bill-alt"} className={"float-left"} size={"2x"}/>
-                      <span className={"h6"}>BUY NOW</span>
                     </MDBBtn>
                   </MDBCol>
                 </MDBRow>
@@ -101,7 +124,7 @@ function getProductSlug(props) {
 }
 
 
-export default withApollo({ssr: true})(withApp(
+export default withApollo()(withApp(
   withRouter(
     compose(
       graphql(
@@ -109,7 +132,11 @@ export default withApollo({ssr: true})(withApp(
         {
           options: (props) => ({variables: {productSlug: getProductSlug(props)}})
         }
-      )
+      ),
+      graphql(addToCart, {name: 'addToCart'}),
+
+      graphql(showCartDialog, {name: 'showCartDialog'}),
+      graphql(removeCartDialog, {name: 'removeCartDialog'})
     )(Product))
 ));
   

@@ -10,12 +10,10 @@ global.fetch = fetch;
 
 // initialize cache object
 const cache = new InMemoryCache();
-
 const httpLink = new HttpLink({
-  ssr: true,
   uri: GRAPHQL_ENDPOINT,
   credentials: 'include',
-  connectToDevTools: true,
+  connectToDevTools: process.env.NODE_ENV !== 'production',
   queryDeduplication: true,
 });
 
@@ -39,8 +37,17 @@ const authMiddleware = new ApolloLink((operation, forward) => {
 // set application initial state
 cache.writeData({
   data: {
-    addCartVisible: false,
-    addCartProductID: null,
+    cartDialog: {
+      __typename: "CartDialog",
+      visible: false,
+      status: null,
+      productName: null
+    },
+    productDialog: {
+      __typename: "ProductDialog",
+      visible: false,
+      productID: null
+    },
     loginErrors: null,
     registerErrors: null
   }

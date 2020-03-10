@@ -123,7 +123,7 @@ class CartPage extends React.Component {
                     className={"z-depth-1 p-1"}/>
             </MDBCol>
             <MDBCol lg={"3"}>
-              <OrderSummary className={"z-depth-1 p-1"}/>
+              <OrderSummary cart={cart} className={"z-depth-1 p-2 position-sticky"}/>
             </MDBCol>
           </MDBRow>
         </MDBContainer>

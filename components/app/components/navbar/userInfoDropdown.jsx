@@ -11,12 +11,12 @@ class UserInfoDropdown extends React.Component {
         return (
           <>
             <Link href="/#">
-              <a className={"dropdown-item"}>
+              <a className={"dropdown-item text-center"}>
                 My account
               </a>
             </Link>
             <Link href={"/"}>
-              <a className={"dropdown-item"} onClick={this.props.logout}>
+              <a className={"dropdown-item text-center"} onClick={this.props.logout}>
                 Log out
               </a>
             </Link>
@@ -25,12 +25,12 @@ class UserInfoDropdown extends React.Component {
       return (
         <>
           <Link href={"/register"}>
-            <a className={"dropdown-item"}>
+            <a className={"dropdown-item text-center"}>
               Register
             </a>
           </Link>
           <Link href={"/login"}>
-            <a className={"dropdown-item"}>
+            <a className={"dropdown-item text-center"}>
               Log In
             </a>
           </Link>
@@ -47,7 +47,7 @@ class UserInfoDropdown extends React.Component {
             alt=""
           />
         </MDBDropdownToggle>
-        <MDBDropdownMenu className="dropdown-default" style={{}}>
+        <MDBDropdownMenu className="dropdown-default user-dropdown">
           {dropDownItems()}
         </MDBDropdownMenu>
       </MDBDropdown>

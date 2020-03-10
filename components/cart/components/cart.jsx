@@ -29,12 +29,12 @@ export function CartItem(props) {
         </Link>
       </td>
       <td className={"align-middle"}>
-        <MDBInput type={"number"} valueDefault={props.number} onChange={onChange}/>
+        <MDBInput validate  type={"number"} valueDefault={props.number} onChange={onChange}/>
       </td>
       <td className={"align-middle"}>{props.price}</td>
       <td className={"align-middle"}>{props.total}</td>
       <td className={"align-middle"}>
-        <MDBBtn onClick={e => props.removeFromCart(props.id)} color={"warning"}>
+        <MDBBtn onClick={e => props.removeFromCart(props.id)} className={"rounded-pill"} color={"warning"}>
           <MDBIcon icon={"trash"}/>
         </MDBBtn>
       </td>
@@ -45,7 +45,6 @@ export function CartItem(props) {
 export function Cart(props) {
   // get the cart products data from props
   const {cart: {products, total}} = props;
-  console.log(props);
   // create cart items to render
   const cartItems = products.map(({product, number, total}, key) => {
     // get cart details from product object
@@ -70,59 +69,63 @@ export function Cart(props) {
   // TODO: implement real value for total and shipping and number of items in cart
   return (
     <div className={props.className}>
-      <h1>Shopping cart</h1>
-      <p className="text-muted">You currently have {products.length} item(s) in your cart.</p>
-
-      <div className="table-responsive">
-        <table className="table">
-          <thead>
-          <tr>
-            <th colSpan="2">Product</th>
-            <th>Quantity</th>
-            <th>Unit price</th>
-            <th colSpan="2">Total</th>
-          </tr>
-          </thead>
-          <tbody>{cartItems}</tbody>
-          <tfoot>
-          <tr>
-            <th colSpan="5">Total</th>
-            <th colSpan="2">{total}</th>
-          </tr>
-          </tfoot>
-        </table>
-      </div>
-      <div className="box-footer d-flex justify-content-between flex-column flex-lg-row">
-        <div className="left">
-          <Link href={"/"}>
-            <a className="btn btn-outline-secondary">
-              <MDBIcon icon="arrow-left" className={"p-1"}/>
-              Continue shopping
-            </a>
-          </Link>
+      <h1 className={"text-center"}>Shopping cart</h1>
+      <p className="text-muted text-center">You currently have <strong>{products.length} item(s)</strong> in your cart.</p>
+      <form onSubmit={e => e.preventDefault()}>
+        <div className="table-responsive">
+          <table className="table">
+            <thead>
+            <tr>
+              <th colSpan="2">Product</th>
+              <th>Quantity</th>
+              <th>Unit price</th>
+              <th colSpan="2" >Total</th>
+            </tr>
+            </thead>
+            <tbody>{cartItems}</tbody>
+            <tfoot>
+            <tr>
+              <th colSpan="5" className={"text-bold"}>Total</th>
+              <th colSpan="2">{total}</th>
+            </tr>
+            </tfoot>
+          </table>
         </div>
-        <div className="right">
-          <MDBBtn outline color={"secondary"} onClick={props.updateCart}>
-            <MDBIcon icon="sync-alt" className={"p-1"}/> Update cart
-          </MDBBtn>
-          <MDBBtn type="submit" color={"primary"}>
-            Proceed to checkout
-            <MDBIcon icon="arrow-right" className={"p-1"}/>
-          </MDBBtn>
+        <div className="box-footer d-flex justify-content-between flex-column flex-lg-row">
+          <div className="left">
+            <Link href={"/"}>
+              <a className="btn btn-outline-secondary rounded-pill">
+                <MDBIcon icon="arrow-left" className={"p-1"}/>
+                Continue shopping
+              </a>
+            </Link>
+          </div>
+          <div className="right">
+            <MDBBtn type={"submit"} outline color={"secondary"} className={"rounded-pill"} onClick={props.updateCart}>
+              <MDBIcon icon="sync-alt" className={"p-1 "}/> Update cart
+            </MDBBtn>
+            <MDBBtn color={"primary"} className={"rounded-pill"}>
+              Proceed to checkout
+              <MDBIcon icon="arrow-right" className={"p-1"}/>
+            </MDBBtn>
+          </div>
         </div>
-      </div>
+      </form>
     </div>
   );
 }
 
 export function OrderSummary(props) {
   //TODO:implement real data on Order Summary
+  // get the cart products data from props
+  const {cart: {total}} = props;
+  // create cart items to render
   return (
     <div className={props.className}>
       <div className="box-header">
-        <h3 className="mb-0">Order summary</h3>
+        <h3 className="mb-0 text-center">Order summary</h3>
       </div>
-      <p className="text-muted">
+      <p className="text-muted px-3 pt-3">
         Shipping and additional costs are calculated based on the values you
         have entered.
       </p>
@@ -131,19 +134,19 @@ export function OrderSummary(props) {
           <tbody>
           <tr>
             <td>Order subtotal</td>
-            <th>$446.00</th>
+            <th>{total}</th>
           </tr>
           <tr>
             <td>Shipping and handling</td>
-            <th>$10.00</th>
+            <th>N/A</th>
           </tr>
           <tr>
             <td>Tax</td>
-            <th>$0.00</th>
+            <th>N/A</th>
           </tr>
           <tr className="total">
             <td>Total</td>
-            <th>$456.00</th>
+            <th>{total}</th>
           </tr>
           </tbody>
         </table>

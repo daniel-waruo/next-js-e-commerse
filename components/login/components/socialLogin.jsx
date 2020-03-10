@@ -5,11 +5,13 @@ import {GoogleLogin} from 'react-google-login';
 import InstagramLogin from 'react-instagram-login';
 import {CLIENT_IDS, FACEBOOK_LOGIN_URL, GOOGLE_LOGIN_URL, INSTAGRAM_LOGIN_URL} from "../../../_constants";
 import {loginErrors} from '../../../components/login/queries';
+import {APP_QUERY} from "../../app/queries";
 
 const {facebook, instagram, google} = CLIENT_IDS;
 
 const refetchQueries = [
   {query: loginErrors},
+  {query: APP_QUERY},
 ];
 
 class SocialLogin extends React.PureComponent {

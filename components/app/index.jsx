@@ -5,8 +5,8 @@ import gql from 'graphql-tag';
 import compose from 'lodash.flowright';
 import {APP_QUERY} from './queries'
 
-import {MainNavbar, ProductDialog} from "./components/index";
-import {MainFooter, SpinnerLoader} from '../global/index'
+import {CartDialog, MainNavbar, ProductDialog} from "./components";
+import {MainFooter, SpinnerLoader} from '../global'
 
 // IMPORT MD BOOTSTRAP CSS
 // use during build
@@ -29,22 +29,23 @@ class App extends React.Component {
       data: {
         loading,
         error,
-        addCartVisible,
-        addCartProductID,
         user,
-        cart
+        cart,
+        productDialog,
+        cartDialog
       }
     } = this.props;
 
     if (loading) return <SpinnerLoader/>;
 
     if (error) return null;
-
+    console.log(this.props.data);
     return (
       <>
         <MainNavbar cart={cart} user={user} logout={this.props.logout}/>
         <main style={mainStyle}>
-          <ProductDialog isVisible={addCartVisible} productID={addCartProductID}/>
+          <ProductDialog productDialog={productDialog}/>
+          <CartDialog cartDialog={cartDialog}/>
           {this.props.children}
         </main>
         <MainFooter/>

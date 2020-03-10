@@ -19,8 +19,14 @@ const style = (
           background-color:#fefefe ;
         }
         .nav-item-mobile{
-          padding-left:40%
+          padding-left:40%;
         }
+        .user-dropdown{
+          left:0px!important;
+        }
+      }
+      .user-dropdown{
+        left:-40px!important;
       }
     `}
   </style>
