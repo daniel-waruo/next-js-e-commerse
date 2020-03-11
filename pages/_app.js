@@ -1,7 +1,7 @@
 // IMPORT MDBOOTSTRAP CSS
 import '../css/dist/all.min.css';
 import '../assets/css/mdb-pro.css';
-import '../css/dist/style.css';
+import '../assets/css/dist/style.css';
 import React from 'react';
 import Head from 'next/head';
 
