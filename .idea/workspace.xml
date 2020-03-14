@@ -5,36 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38d6c4b7-e263-4646-a63b-27f18fe4d77f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/init-cache.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/initial-client-state.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/get-host.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/next-js-e-commerse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/next-js-e-commerse.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_helpers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/_helpers.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_request.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/_request.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apollo/authResolvers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/apollo/authResolvers.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apollo/cartResolver.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/apollo/cartResolver.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apolloClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/apolloClient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/app/components/cartAddDialog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/app/components/cartAddDialog.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/app/components/navbar/search_form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/app/components/navbar/search_form.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/app/components/navbar/userInfoDropdown.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/app/components/navbar/userInfoDropdown.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/app/components/productDialog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/app/components/productDialog.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/app/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/app/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/login/components/loginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/login/components/loginForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/login/components/socialLogin.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/login/components/socialLogin.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/products/components/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/products/components/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/apollo.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/apollo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_error/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_error/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/products/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/products/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/apolloClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/apolloClient.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../react-instagram-login/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../react-instagram-login/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../with-cookie-auth-app/pages/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/../with-cookie-auth-app/pages/profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../with-cookie-auth-app/utils/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/../with-cookie-auth-app/utils/auth.js" afterDir="false" />
@@ -64,7 +36,20 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="apolloClient.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/apolloClient.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#42#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -176,13 +161,13 @@
         <option value="$PROJECT_DIR$/lib/apollo.js" />
         <option value="$PROJECT_DIR$/../with-cookie-auth-app/utils/auth.js" />
         <option value="$PROJECT_DIR$/_helpers.jsx" />
-        <option value="$PROJECT_DIR$/lib/apolloClient.js" />
         <option value="$PROJECT_DIR$/../e-commerse-api-cookie-auth/utils/session/middleware.py" />
         <option value="$PROJECT_DIR$/_request.jsx" />
         <option value="$PROJECT_DIR$/apollo/cartResolver.jsx" />
         <option value="$PROJECT_DIR$/components/app/index.jsx" />
         <option value="$PROJECT_DIR$/components/app/components/navbar/userInfoDropdown.jsx" />
         <option value="$PROJECT_DIR$/apollo/authResolvers.jsx" />
+        <option value="$PROJECT_DIR$/lib/apolloClient.js" />
       </list>
     </option>
   </component>
@@ -220,6 +205,11 @@
             <path>
               <item name="next-js-cookie-auth" type="b2602c69:ProjectViewProjectNode" />
               <item name="next-js-cookie-auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="next-js-cookie-auth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="next-js-cookie-auth" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -486,8 +476,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.9207921" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.031353135" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.48679867" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49848714" visible="true" weight="0.7046205" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19440243" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49848714" visible="true" weight="0.27557755" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28139183" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" weight="0.32980332" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -505,27 +495,27 @@
       <window_info anchor="bottom" id="Find" order="1" weight="0.7821782" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17549168" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.0" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17549168" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32838285" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="13" weight="0.11881188" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.48679867" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.7821782" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.031353135" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39933994" />
       <window_info anchor="right" id="Database" order="4" weight="0.32980332" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49848714" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.5015129" side_tool="true" weight="0.3679868" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.7821782" />
       <window_info anchor="bottom" id="Messages" order="12" />
       <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
@@ -578,7 +568,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/_document.js" />
     <entry file="file://$PROJECT_DIR$/public/static/React-icon.svg" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
@@ -774,19 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/apollo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="93" column="40" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="40" />
-          <folding>
-            <element signature="e#2150#2548#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -839,9 +815,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="47" column="50" lean-forward="true" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -852,23 +825,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/apolloClient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/app/components/navbar/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="140" column="31" selection-start-line="140" selection-start-column="31" selection-end-line="140" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -883,9 +843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#81#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -893,9 +850,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret lean-forward="true" />
-          <folding>
-            <element signature="e#0#66#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -910,9 +864,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -920,8 +871,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="82">
           <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/et --hard HEADgit reset --hard HEAD">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/apollo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="121" column="13" lean-forward="true" selection-start-line="121" selection-start-column="13" selection-end-line="121" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/apolloClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
