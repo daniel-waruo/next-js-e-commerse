@@ -16,7 +16,6 @@ const refetchQueries = [
 
 class SocialLogin extends React.PureComponent {
   responseGoogle = async response => {
-    console.log("Google response", response);
     await this.props.socialLogin({
       variables: {
         url: GOOGLE_LOGIN_URL,
@@ -26,7 +25,6 @@ class SocialLogin extends React.PureComponent {
     });
   };
   responseFacebook = async response => {
-    console.log("Facebook response", response);
     await this.props.socialLogin({
       variables: {
         url: FACEBOOK_LOGIN_URL,

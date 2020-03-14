@@ -90,7 +90,6 @@ class ProductsPage extends React.Component {
       marginLeft: (this.state.sideNavOpen) ? 300 : 0,
       transition: "margin-left .5s",
     };
-    console.log(this.props.data);
     const {data: {loading, error, filterProducts}} = this.props;
 
     if (loading) return <SpinnerLoader/>;

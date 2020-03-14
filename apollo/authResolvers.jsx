@@ -1,6 +1,14 @@
 import {LOGIN_URL, LOGOUT_URL, REGISTER_URL} from "../_constants";
 import {parseError} from "../_helpers";
 import {request} from '../_request';
+import cookie from 'js-cookie'
+import Router from 'next/router'
+
+const login = token => {
+  // set token cookie
+  cookie.set('token', token, {expires: 1});
+  Router.push("/")
+};
 
 export default {
   login: async (obj, args, {cache}, info) => {
@@ -9,11 +17,8 @@ export default {
       url: LOGIN_URL,
       data: args,
       success: data => {
-        // store token in local storage
-        // TODO : stop storing token in
-        if (typeof localStorage != "undefined")
-          localStorage.setItem("token", data.token);
-
+        // set token in the cookie
+        login(data.token);
       },
       error: error => {
         // write the error on the cache
@@ -34,11 +39,7 @@ export default {
       url: LOGOUT_URL, // logout url
       success: data => {
         // clear local storage
-        if (typeof localStorage != "undefined") {
-          localStorage.clear();
-          // reload the page
-          window.location.reload();
-        }
+        cookie.remove('token');
       },
     });
     // return null
@@ -76,10 +77,7 @@ export default {
       },
       success: data => {
         // store token in local storage
-        // FIXME : stop using localStorage to store tokens
-        if (typeof localStorage != "undefined") {
-          localStorage.setItem("token", data.token);
-        }
+        login(data.token);
       },
       error: error => {
         // write the error on the cache

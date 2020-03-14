@@ -7,10 +7,15 @@ import Link from "next/link";
 
 
 class CartAddDialog extends React.Component {
-
+  static defaultProps = {
+    cartDialog: {
+      visible: false,
+      status: null,
+      productName: null
+    }
+  };
   toggle = () => {
     const {visible, status} = this.props.cartDialog;
-
     if (visible) {
       this.props.removeCartDialog()
     }
@@ -65,7 +70,7 @@ class CartAddDialog extends React.Component {
             <Link href={"/cart"}>
               <a className="btn btn-outline-primary rounded-pill" onClick={e => this.props.removeCartDialog()}>
                 <MDBIcon icon="shopping-cart" className={"p-1"}/>
-              Proceed to Cart
+                Proceed to Cart
               </a>
             </Link>
           </MDBModalFooter>

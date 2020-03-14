@@ -1,18 +1,22 @@
-let token = null;
-if (typeof window != "undefined") {
-  token = localStorage.getItem('token') || null;
-}
+import cookie from 'js-cookie'
 
-const postConfig = data => ({
-  method: 'POST', // set as in POST
-  cache: 'no-cache', // disable cache
-  credentials: 'include',
-  headers: {
-    'Authorization': token ? `Token ${token}` : "",
-    'Content-Type': 'application/json' //
-  },
-  body: JSON.stringify(data) // body data type must match "Content-Type" header
-});
+const postConfig = data => {
+  let token;
+  token = cookie.get('token') || null;
+  const anonymous_session = cookie.get('anonymous_session');
+
+  return {
+    method: 'POST', // set as in POST
+    cache: 'no-cache', // disable cache
+    credentials: 'include',
+    headers: {
+      'Authorization': token ? `Token ${token}` : "",
+      'Content-Type': 'application/json',
+      'anonymous-session': anonymous_session
+    },
+    body: JSON.stringify(data) // body data type must match "Content-Type" header
+  }
+};
 
 // function for handling post data
 async function post(config = {

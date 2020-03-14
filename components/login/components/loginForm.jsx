@@ -17,7 +17,6 @@ export default function LoginForm(props) {
     }
     return null
   };
-  console.log(props);
   return (
     <>
       <MDBContainer>

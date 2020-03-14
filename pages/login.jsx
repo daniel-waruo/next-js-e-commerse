@@ -35,7 +35,6 @@ class Login extends React.Component {
   };
 
   render() {
-    console.log(this.props);
     // get loginErrors and the user from the props
     const {data: {loginErrors, user}, loading} = this.props;
     // if still loading show spinner loader

@@ -4,7 +4,7 @@ import {request} from '../_request';
 export default {
   addToCart: async (obj, args, {cache}, info) => {
     // initialize success as false
-    let success = false;
+    let success = false ;
     const data = {
       product_pk: parseInt(args.productID),
       product_number: args.productNumber
@@ -98,5 +98,4 @@ export default {
     });
     return null;
   }
-
 }
