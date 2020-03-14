@@ -18,6 +18,12 @@ import {
 
 
 class ProductDialog extends React.Component {
+  static defaultProps = {
+    productDialog: {
+      visible: false,
+      productID: null
+    }
+  };
   constructor(props) {
     super(props);
     this.state = {

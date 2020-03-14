@@ -8,18 +8,12 @@ import {APP_QUERY} from './queries'
 import {CartDialog, MainNavbar, ProductDialog} from "./components";
 import {MainFooter, SpinnerLoader} from '../global'
 
-// IMPORT MD BOOTSTRAP CSS
-// use during build
-//import './indexBuild.scss'
-// uncomment during dev
-// import './index.scss'
-
 class App extends React.Component {
 
   render() {
     const mainStyle = {
       paddingTop: "0.75rem",
-      paddingBottom: "5rem",
+      paddingBottom: "2rem",
       minHeight: '90vh',
       marginRight: 1,
       marginLeft: 1,
@@ -38,8 +32,16 @@ class App extends React.Component {
 
     if (loading) return <SpinnerLoader/>;
 
-    if (error) return null;
-    console.log(this.props.data);
+    if (error) {
+      console.log(error);
+      return (
+        <>
+          <h1 className={"text-center"}>OOPS THERE IS AN ERROR</h1>
+        </>
+      );
+    }
+
+
     return (
       <>
         <MainNavbar cart={cart} user={user} logout={this.props.logout}/>

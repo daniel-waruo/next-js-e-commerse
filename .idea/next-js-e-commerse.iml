@@ -6,6 +6,7 @@
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="e_commerce" />
+    <orderEntry type="module" module-name="with-cookie-auth-app" />
   </component>
   <component name="TestRunnerService">
     <option name="PROJECT_TEST_RUNNER" value="Unittests" />

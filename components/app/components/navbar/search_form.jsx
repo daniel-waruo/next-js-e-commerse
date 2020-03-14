@@ -41,7 +41,6 @@ class SearchForm extends React.Component {
   };
   handleResize = () => {
     if (this.props.windowWidth >= 977 && this.props.windowWidth <= 1100) {
-      console.log(this.props.windowWidth);
       if (this.state.collapseOpen === true) {
         this.setState(
           {collapseOpen: false}

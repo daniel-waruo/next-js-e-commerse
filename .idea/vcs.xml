@@ -3,7 +3,9 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../django-rest-auth" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../e-commerse-api-cookie-auth" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../gram" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../react-instagram-login" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../with-cookie-auth-app" vcs="Git" />
   </component>
 </project>

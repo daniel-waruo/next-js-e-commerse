@@ -32,4 +32,3 @@ export const carouselImageStyle = (image_url, url_param) => {
     backgroundImage: `url('${image_url + url_param }')`
   }
 };
-

@@ -14,7 +14,6 @@ export class CategoryFilter extends React.Component {
     state[id] = !currentValue;
 
     this.setState(state);
-    console.log(currentValue, this.state);
     // pass the data to higher components
     this.props.updateFilter(id, !currentValue);
   };
