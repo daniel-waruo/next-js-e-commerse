@@ -81,7 +81,7 @@ class CartPage extends React.Component {
     })
   };
 
-  updateCart = e => {
+  updateCart = () => {
     let products = this.state.updateProducts;
     if (products.length)
       this.props.updateCart({
@@ -92,8 +92,7 @@ class CartPage extends React.Component {
           {query: cartQuery},
           {query: APP_QUERY}
         ]
-      }).then(data =>
-        this.setState({updateProducts: []}))
+      }).then(() => this.setState({updateProducts: []}))
   };
 
   render() {
@@ -133,7 +132,10 @@ class CartPage extends React.Component {
 }
 
 const queries = compose(
-  graphql(cartQuery),
+  graphql(
+    cartQuery,
+    {options: {fetchPolicy: 'network-only'}}
+  ),
   graphql(removeFromCart, {name: 'removeFromCart'}),
   graphql(updateCart, {name: 'updateCart'})
 );

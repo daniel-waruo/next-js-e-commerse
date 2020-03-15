@@ -60,8 +60,8 @@ class MainNavbar extends Component {
       />
     );
     const {collapseID} = this.state;
-    const cart = this.props.cart;
-    const cartNumber = cart == null ? 0 : cart.products.length;
+
+    const {cart: {number}} = this.props;
 
     return (
       <>
@@ -131,7 +131,7 @@ class MainNavbar extends Component {
                       }}
                       className="rounded-circle"
                     >
-                      {cartNumber}
+                      {number}
                     </sup>
                     Cart
                   </a>
