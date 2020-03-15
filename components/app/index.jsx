@@ -6,7 +6,7 @@ import compose from 'lodash.flowright';
 import {APP_QUERY} from './queries'
 
 import {CartDialog, MainNavbar, ProductDialog} from "./components";
-import {MainFooter, SpinnerLoader} from '../global'
+import {MainFooter} from '../global'
 
 class App extends React.Component {
 
@@ -30,7 +30,7 @@ class App extends React.Component {
       }
     } = this.props;
 
-    if (loading) return <SpinnerLoader/>;
+    //if (loading) return <SpinnerLoader/>;
 
     if (error) {
       console.log(error);
@@ -44,10 +44,10 @@ class App extends React.Component {
 
     return (
       <>
-        <MainNavbar cart={cart} user={user} logout={this.props.logout}/>
+        <MainNavbar loading={loading} cart={cart} user={user} logout={this.props.logout}/>
         <main style={mainStyle}>
-          <ProductDialog productDialog={productDialog}/>
-          <CartDialog cartDialog={cartDialog}/>
+          <ProductDialog loading={loading} productDialog={productDialog}/>
+          <CartDialog loading={loading} cartDialog={cartDialog}/>
           {this.props.children}
         </main>
         <MainFooter/>

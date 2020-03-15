@@ -29,7 +29,12 @@ class CartAddDialog extends React.Component {
   };
 
   render() {
-    const {visible, status, productName} = this.props.cartDialog;
+
+    const {cartDialog, loading} = this.props;
+
+    if (loading) return null;
+
+    const {visible, status, productName} = cartDialog;
     if (visible === true) {
       const isSuccess = status === "success",
         body = isSuccess ?

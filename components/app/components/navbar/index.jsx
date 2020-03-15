@@ -4,6 +4,7 @@ import {MDBBtn, MDBCol, MDBCollapse, MDBIcon, MDBNavbar, MDBNavbarNav, MDBNavIte
 import SearchForm from "./search_form";
 import UserInfoDropdown from "./userInfoDropdown";
 import Link from 'next/link'
+import CartNavItem from "./cartNavItem"
 
 const style = (
   <style>
@@ -61,7 +62,7 @@ class MainNavbar extends Component {
     );
     const {collapseID} = this.state;
 
-    const {cart: {number}} = this.props;
+    const {cart, loading} = this.props;
 
     return (
       <>
@@ -120,23 +121,7 @@ class MainNavbar extends Component {
                   </a>
                 </Link>
               </MDBNavItem>
-              <MDBNavItem className={"nav-item-mobile"}>
-                <Link href={"/cart"}>
-                  <a className={"nav-link waves-effect waves-light"}>
-                    <MDBIcon icon="shopping-cart" className="mr-1"/>
-                    <sup
-                      style={{
-                        padding: 3,
-                        textEmphasisStyle: "bold"
-                      }}
-                      className="rounded-circle"
-                    >
-                      {number}
-                    </sup>
-                    Cart
-                  </a>
-                </Link>
-              </MDBNavItem>
+              <CartNavItem loading={loading} cart={cart}/>
               <MDBNavItem className={"nav-item-mobile"}>
                 <UserInfoDropdown
                   logout={this.props.logout}

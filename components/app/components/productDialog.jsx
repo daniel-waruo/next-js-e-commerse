@@ -24,6 +24,7 @@ class ProductDialog extends React.Component {
       productID: null
     }
   };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -78,8 +79,10 @@ class ProductDialog extends React.Component {
   };
 
   render() {
+    const {productDialog, loading} = this.props;
+    if (loading) return null;
     // get visible and product ID from product Dialog
-    const {visible, productID} = this.props.productDialog;
+    const {visible, productID} = productDialog;
     if (visible === true) {
       return (
         <Query query={PRODUCT_QUERIES} variables={{productID: productID}} fetchPolicy="network-only">
