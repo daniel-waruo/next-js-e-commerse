@@ -10,6 +10,7 @@ import {withRouter} from "next/router"
 import {withApp} from "../../components/app/index";
 import {withApollo} from "../../lib/apollo";
 import SpinnerLoader from "../../components/global/loaders/spinnerLoader";
+import {NextSeo} from 'next-seo';
 
 class ProductsPage extends React.Component {
 
@@ -96,28 +97,31 @@ class ProductsPage extends React.Component {
     if (error) return "Error";
     const {filterPrice: {min, max}} = filterProducts;
     return (
-      <div className={"page overflow-hidden"}>
-        <MDBContainer fluid>
-          <SideNav toggleFunction={this.toggleSideNav} isOpen={this.state.sideNavOpen}>
-            <div className={"h3 nav-link text-white text-center"}>Filters</div>
-            <div className={"text-white"}>
-              <RangeSlider title={"Price"} min={min} max={max} minPrice={min} maxPrice={max} step={1}
-                           updateFilter={this.updatePriceFilter} data={this.props.data}/>
-              <CategoryFilter data={this.props.data} updateFilter={this.updateCategoryFilter}
-                              categories={this.state.categories}/>
-              <MDBBtn style={{bottom: 0}} onClick={this.applyFilters} className={"fixed-bottom m-auto"}>APPLY
-                FILTERS</MDBBtn>
-            </div>
-          </SideNav>
-        </MDBContainer>
-        <div style={divStyle} className={"sidenav-main"}>
-          <MDBContainer>
-            <h1 className={"text-center h-100"}>Products</h1>
-            <SearchForm toggleSideNav={this.toggleSideNav}/>
-            <ProductView data={this.props.data}/>
+      <>
+        <NextSeo title={"PRODUCTS"}/>
+        <div className={"page overflow-hidden"}>
+          <MDBContainer fluid>
+            <SideNav toggleFunction={this.toggleSideNav} isOpen={this.state.sideNavOpen}>
+              <div className={"h3 nav-link text-white text-center"}>Filters</div>
+              <div className={"text-white"}>
+                <RangeSlider title={"Price"} min={min} max={max} minPrice={min} maxPrice={max} step={1}
+                             updateFilter={this.updatePriceFilter} data={this.props.data}/>
+                <CategoryFilter data={this.props.data} updateFilter={this.updateCategoryFilter}
+                                categories={this.state.categories}/>
+                <MDBBtn style={{bottom: 0}} onClick={this.applyFilters} className={"fixed-bottom m-auto"}>APPLY
+                  FILTERS</MDBBtn>
+              </div>
+            </SideNav>
           </MDBContainer>
+          <div style={divStyle} className={"sidenav-main"}>
+            <MDBContainer>
+              <h1 className={"text-center h-100"}>Products</h1>
+              <SearchForm toggleSideNav={this.toggleSideNav}/>
+              <ProductView data={this.props.data}/>
+            </MDBContainer>
+          </div>
         </div>
-      </div>
+      </>
     )
   }
 }

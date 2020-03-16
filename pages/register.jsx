@@ -9,7 +9,7 @@ import {register, registerErrors} from '../components/register/queries'
 
 import {withApp} from "../components/app/index";
 import {withApollo} from "../lib/apollo";
-
+import {NextSeo} from 'next-seo'
 
 class Register extends React.Component {
 
@@ -45,16 +45,14 @@ class Register extends React.Component {
     const {data: {registerErrors, user}, loading} = this.props;
     if (loading) return <SpinnerLoader/>;
 
-    if (this.state.success) {
-      return <Redirect to={"/login"}/>
-    }
-    if (user) {
-      return <Redirect to={"/"}/>
-    }
     return (
-      <div className={"page"}>
-        <RegisterForm onChange={this.onChange} register={this.register} registerErrors={registerErrors}/>
-      </div>)
+      <>
+        <NextSeo title={"REGISTER"}/>
+        <div className={"page"}>
+          <RegisterForm onChange={this.onChange} register={this.register} registerErrors={registerErrors}/>
+        </div>
+      </>
+    )
   }
 }
 

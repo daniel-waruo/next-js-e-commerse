@@ -1,4 +1,4 @@
-import React from 'react';
+import {Component} from 'react';
 import {MDBCol, MDBContainer, MDBRow} from 'mdbreact';
 import {Cart, EmptyCart, OrderSummary} from "../components/cart/components";
 import {graphql} from 'react-apollo';
@@ -8,9 +8,9 @@ import {APP_QUERY} from "../components/app/queries";
 import {SpinnerLoader} from '../components/global/index';
 import {withApp} from '../components/app/index'
 import {withApollo} from "../lib/apollo";
+import {NextSeo} from 'next-seo'
 
-
-class CartPage extends React.Component {
+class CartPage extends Component {
 
   constructor(props) {
     super(props);
@@ -108,25 +108,39 @@ class CartPage extends React.Component {
     if (error) return null;
 
     if (!cart.products.length) {
-      return <EmptyCart/>
+      return (
+        <>
+          <NextSeo
+            title={"CART EMPTY"}
+            index={false}
+          />
+          <EmptyCart/>
+        </>
+      )
     }
     return (
-      <div className={"page"}>
-        <MDBContainer fluid className={"mt-2"}>
-          <MDBRow>
-            <MDBCol lg={"9"}>
-              <Cart removeFromCart={this.removeFromCart}
-                    handleUpdate={this.handleUpdate}
-                    updateCart={this.updateCart}
-                    cart={cart}
-                    className={"z-depth-1 p-1"}/>
-            </MDBCol>
-            <MDBCol lg={"3"}>
-              <OrderSummary cart={cart} className={"z-depth-1 p-2 position-sticky"}/>
-            </MDBCol>
-          </MDBRow>
-        </MDBContainer>
-      </div>
+      <>
+        <NextSeo
+          title={"CART"}
+          index={false}
+        />
+        <div className={"page"}>
+          <MDBContainer fluid className={"mt-2"}>
+            <MDBRow>
+              <MDBCol lg={"9"}>
+                <Cart removeFromCart={this.removeFromCart}
+                      handleUpdate={this.handleUpdate}
+                      updateCart={this.updateCart}
+                      cart={cart}
+                      className={"z-depth-1 p-1"}/>
+              </MDBCol>
+              <MDBCol lg={"3"}>
+                <OrderSummary cart={cart} className={"z-depth-1 p-2 position-sticky"}/>
+              </MDBCol>
+            </MDBRow>
+          </MDBContainer>
+        </div>
+      </>
     );
   }
 }

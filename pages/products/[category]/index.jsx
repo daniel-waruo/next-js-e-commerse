@@ -9,6 +9,7 @@ import {SearchForm} from "../../../components/products/components";
 import {withRouter} from "next/router"
 import {withApp} from "../../../components/app/index";
 import {withApollo} from "../../../lib/apollo";
+import {NextSeo} from 'next-seo'
 
 class ProductsPage extends React.Component {
 
@@ -74,20 +75,23 @@ class ProductsPage extends React.Component {
     };
     const {query: {category}} = this.props.router;
     return (
-      <div className={"page"}>
-        <MDBContainer fluid>
-          <SideNav toggleFunction={this.toggleSideNav} isOpen={this.state.sideNavOpen}>
-            <div className={"h3 nav-link text-white text-center"}>Filters {category}</div>
-          </SideNav>
-        </MDBContainer>
-        <div style={divStyle} className={"sidenav-main"}>
-          <MDBContainer>
-            <h1 className={"text-center text-capitalize h-100"}>{category}</h1>
-            <SearchForm toggleSideNav={this.toggleSideNav}/>
-            <ProductView data={this.props.data}/>
+      <>
+        <NextSeo title={category}/>
+        <div className={"page"}>
+          <MDBContainer fluid>
+            <SideNav toggleFunction={this.toggleSideNav} isOpen={this.state.sideNavOpen}>
+              <div className={"h3 nav-link text-white text-center"}>Filters {category}</div>
+            </SideNav>
           </MDBContainer>
+          <div style={divStyle} className={"sidenav-main"}>
+            <MDBContainer>
+              <h1 className={"text-center text-capitalize h-100"}>{category}</h1>
+              <SearchForm toggleSideNav={this.toggleSideNav}/>
+              <ProductView data={this.props.data}/>
+            </MDBContainer>
+          </div>
         </div>
-      </div>
+      </>
     )
   }
 }

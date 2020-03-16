@@ -4,6 +4,7 @@ import Rating from "react-rating";
 import gql from 'graphql-tag';
 import {graphql} from "react-apollo";
 import {APP_QUERY} from "../../app/queries";
+import Link from "next/link";
 
 
 class ProductCard extends React.Component {
@@ -33,6 +34,11 @@ class ProductCard extends React.Component {
         <MDBCardImage cascade className="img-fluid" src={productImage + "-/scale_crop/500x500/smart/"}/>
         <MDBCardBody cascade className="p-1" color="transparent">
           <div className={"text-center card-text"}>
+            <Link
+              href={"/products/[category]/[slug]"}
+              as={`/products/${product.category.slug}/${product.slug}`}>
+              <a className={"d-none"}/>
+            </Link>
             <h5 className={"text-capitalize pb-2 text-"}>{product.name}</h5>
             <h6>
               {product.discountPrice}

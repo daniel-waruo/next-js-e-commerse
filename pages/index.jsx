@@ -1,4 +1,4 @@
-import React from "react";
+import {Component} from "react";
 import {MDBCol, MDBRow} from "mdbreact";
 import {graphql} from 'react-apollo';
 import {HOME_QUERIES} from '../components/index/queries.jsx';
@@ -7,9 +7,9 @@ import {CarouselHome, CategoryMenuLinks, ProductsHome} from "../components/index
 import {SpinnerLoader} from '../components/global/index'
 import {withApp} from "../components/app/index";
 import {withApollo} from "../lib/apollo";
+import {NextSeo} from 'next-seo'
 
-
-class Home extends React.Component {
+class Home extends Component {
 
   render() {
     // get data from apollo's  data prop
@@ -30,6 +30,13 @@ class Home extends React.Component {
 
     return (
       <>
+        <NextSeo
+          title={"HOME"}
+          description={
+            "Next JS E-commerce by Daniel Waruo is an e-commerce store developed " +
+            "by Daniel Waruo for B2C model businesses.One cannot make real purchases of the products"
+          }
+        />
         <MDBRow className={"mx-1 my-1"}>
           <MDBCol md={"3"} className="f-85 d-none d-md-block ">
             <div className={"h-100 z-depth-1 rounded mb0"}>
@@ -53,6 +60,6 @@ class Home extends React.Component {
   }
 }
 
-export default withApollo({ssr:true})(
+export default withApollo({ssr: true})(
   withApp(graphql(HOME_QUERIES)(Home))
 )

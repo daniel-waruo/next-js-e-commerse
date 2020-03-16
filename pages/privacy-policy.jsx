@@ -2,11 +2,17 @@ import React from "react";
 import {withApp} from "../components/app/index";
 import {withApollo} from "../lib/apollo";
 import {MDBContainer} from "mdbreact";
+import {NextSeo} from 'next-seo';
 
 class PrivacyPolicy extends React.PureComponent {
   render() {
     return (
       <>
+        <NextSeo
+          title={"PRIVACY-POLICY"}
+          description={"See our comprehensive prvacy policy we care for your data as much as you do."
+          }
+        />
         <MDBContainer>
           <h1 className={"text-center"}>Privacy Policy for Next JS Commerse</h1>
 

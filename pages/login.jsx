@@ -8,6 +8,7 @@ import {login, loginErrors, socialLogin} from '../components/login/queries';
 import {APP_QUERY} from '../components/app/queries';
 import {withApp} from '../components/app/index';
 import {withApollo} from "../lib/apollo";
+import {NextSeo} from 'next-seo';
 
 class Login extends React.Component {
   constructor(props) {
@@ -49,13 +50,22 @@ class Login extends React.Component {
     // return login form for rendering 
 
     return (
-      <div className={"page"}>
-        <LoginForm onChange={this.onChange}
-                   socialLogin={this.props.socialLogin}
-                   login={this.login}
-                   loginErrors={loginErrors}
-                   loading={false} />
-      </div>
+      <>
+        <NextSeo
+          title={"LOGIN"}
+          description={
+            "Login into Next JS E-commerce using our secure social login feature." +
+            "Login through FaceBook , Google and Instagram"
+          }
+        />
+        <div className={"page"}>
+          <LoginForm onChange={this.onChange}
+                     socialLogin={this.props.socialLogin}
+                     login={this.login}
+                     loginErrors={loginErrors}
+                     loading={false}/>
+        </div>
+      </>
     )
   }
 }
