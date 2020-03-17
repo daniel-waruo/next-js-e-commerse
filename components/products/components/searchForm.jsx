@@ -44,14 +44,14 @@ class SearchForm extends React.Component {
               valueDefault={this.state.value}
             />
           </MDBCol>
-          <MDBCol size={"12"} md={"9"}>
-            <MDBBtn outline type={"submit"} color={"primary"}>
-              <MDBIcon icon={"search"}/>
-              <span className={"mx-2"}>Search</span>
-            </MDBBtn>
-            <MDBBtn outline onClick={this.props.toggleSideNav} color={"secondary"}>
+          <MDBCol size={"12"} md={"9"} className={"text-center"}>
+            <MDBBtn outline onClick={this.props.toggleSideNav} className={"rounded-pill"}>
               <MDBIcon icon={"sliders-h"}/>
               <span className={"mx-2"}>Filter</span>
+            </MDBBtn>
+            <MDBBtn outline type={"submit"} color={"primary"} className={"rounded-pill"}>
+              <MDBIcon icon={"search"}/>
+              <span className={"mx-2"}>Search</span>
             </MDBBtn>
           </MDBCol>
         </MDBRow>

@@ -1,6 +1,4 @@
 import React from "react";
-import {withApp} from "../components/app/index";
-import {withApollo} from "../lib/apollo";
 import {MDBContainer} from "mdbreact";
 import {NextSeo} from 'next-seo';
 
@@ -161,6 +159,5 @@ class PrivacyPolicy extends React.PureComponent {
 }
 
 
-export default withApollo()(
-  withApp(PrivacyPolicy)
-)
+export default PrivacyPolicy
+

@@ -1,12 +1,12 @@
-import React from "react";
-import {MDBBtn, MDBIcon, MDBModal, MDBModalBody, MDBModalFooter, MDBModalHeader} from "mdbreact";
-import {addToCart, removeCartDialog, showCartDialog} from "../queries";
+import {Component} from 'react';
+import {MDBBtn, MDBIcon, MDBModal, MDBModalBody, MDBModalFooter, MDBModalHeader} from 'mdbreact';
+import {addToCart, removeCartDialog, showCartDialog} from '../queries';
 import {graphql} from 'react-apollo'
-import compose from "lodash.flowright";
-import Link from "next/link";
+import compose from 'lodash.flowright'
+import Link from 'next/link'
 
 
-class CartAddDialog extends React.Component {
+class CartAddDialog extends Component {
   static defaultProps = {
     cartDialog: {
       visible: false,

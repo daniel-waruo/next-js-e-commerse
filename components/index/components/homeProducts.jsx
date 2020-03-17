@@ -1,6 +1,6 @@
 import React from 'react';
 import {MDBCol, MDBRow} from "mdbreact";
-import {ProductCard} from "../../global/index";
+import ProductCard from "../../global/products/product";
 
 class ProductsHome extends React.PureComponent {
   render() {

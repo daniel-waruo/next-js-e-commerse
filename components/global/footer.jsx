@@ -1,13 +1,26 @@
 import React from 'react';
-import {MDBFooter} from 'mdbreact';
+import {MDBCol, MDBRow} from 'mdbreact';
 
 export function MainFooter() {
   return (
-    <MDBFooter className="z-depth-half border">
-      <p className='footer-copyright white mb-0 py-3 text-center text-dark'>
-        &copy; {new Date().getFullYear()} Copyright:
-        <a href='https://www.MDBootstrap.com' className="text-dark"> MDBootstrap.com </a>
-      </p>
-    </MDBFooter>
+    <div className={"z-depth-1"}>
+      <MDBRow center >
+        <MDBCol>
+          <h5 className={"text-center"}><i>Website Developed by</i></h5>
+        </MDBCol>
+        <MDBCol size={"12"}>
+          <div className="LI-profile-badge d-flex justify-content-center" data-version="v1"
+               data-size="large" data-locale="en_US"
+               data-type="horizontal" data-theme="light"
+               data-vanity="daniel-waruo">
+            <a
+              className="LI-simple-link"
+              href='https://ke.linkedin.com/in/daniel-waruo?trk=profile-badge'>
+              Daniel Waruo
+            </a>
+          </div>
+        </MDBCol>
+      </MDBRow>
+    </div>
   )
 }

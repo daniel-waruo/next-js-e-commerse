@@ -5,13 +5,16 @@ import '../assets/css/dist/style.css';
 import React from 'react';
 import Head from 'next/head';
 import {DefaultSeo} from 'next-seo'
+import {AppLayout} from "../components/app";
+import {withApollo} from "../lib/apollo";
 
 // This default export is required in a new `pages/_app.js` file.
-export default function MyApp({Component, pageProps}) {
+function App({Component, pageProps}) {
   return (
     <>
       <Head>
         <link rel="shortcut icon" href={"/favicon.ico"}/>
+        <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer/>
       </Head>
       <DefaultSeo
         title={""}
@@ -21,7 +24,12 @@ export default function MyApp({Component, pageProps}) {
           "in Kenya."
         }
       />
-      <Component {...pageProps} />
+
+      <AppLayout>
+        <Component {...pageProps} />
+      </AppLayout>
     </>
   )
 }
+
+export default withApollo({ssr: false})(App)

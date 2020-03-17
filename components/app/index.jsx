@@ -1,14 +1,17 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 import {graphql} from 'react-apollo'
 import gql from 'graphql-tag';
 import compose from 'lodash.flowright';
 import {APP_QUERY} from './queries'
 
-import {CartDialog, MainNavbar, ProductDialog} from "./components";
-import {MainFooter} from '../global'
+import CartDialog from "./components/cartAddDialog";
+import MainNavbar from "./components/navbar";
+import ProductDialog from "./components/productDialog";
 
-class App extends React.Component {
+import {MainFooter} from '../global/footer'
+
+class App extends Component {
 
   render() {
     const mainStyle = {
@@ -50,13 +53,15 @@ class App extends React.Component {
           <CartDialog loading={loading} cartDialog={cartDialog}/>
           {this.props.children}
         </main>
-        <MainFooter/>
+        <div className={"overflow-hidden"}>
+          <MainFooter/>
+        </div>
       </>
     );
   }
 }
 
-const MyApp = compose(
+export const AppLayout = compose(
   graphql(APP_QUERY),
   graphql(
     gql`
@@ -69,7 +74,7 @@ const MyApp = compose(
 
 export const withApp = PageComponent =>
   props => (
-    <MyApp>
+    <AppLayout>
       <PageComponent {...props} />
-    </MyApp>
+    </AppLayout>
   );

@@ -19,6 +19,7 @@ export class CategoryFilter extends React.Component {
   };
 
   render() {
+    if (this.props.category) return null;
     const {loading, error, allCategories} = this.props.data;
     if (loading) return null;
 

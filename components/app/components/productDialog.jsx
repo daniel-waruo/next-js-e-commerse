@@ -1,11 +1,11 @@
-import React from "react";
+import {Component} from "react";
 import {MDBBtn, MDBCol, MDBIcon, MDBModal, MDBRow} from "mdbreact";
 import DialogPanel from './dialogPanel'
 import {graphql, Query} from 'react-apollo';
 import compose from 'lodash.flowright'
 
-import {SpinnerLoader} from "../../global/index"
-import CarouselProduct from "../../product/components/carouselProduct";
+import SpinnerLoader from '../../global/loaders/spinnerLoader'
+import CarouselProduct from '../../product/components/carouselProduct';
 import {
   addToCart,
   APP_QUERY,
@@ -17,7 +17,7 @@ import {
 } from '../queries';
 
 
-class ProductDialog extends React.Component {
+class ProductDialog extends Component {
   static defaultProps = {
     productDialog: {
       visible: false,

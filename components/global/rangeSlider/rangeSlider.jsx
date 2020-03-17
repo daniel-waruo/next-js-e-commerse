@@ -39,6 +39,8 @@ class RangeSlider extends Component {
       domain = [minPrice, maxPrice],
       defaultValues = [min, max];
 
+    if (minPrice === maxPrice)
+      return null;
     //TODO :style it better
     return (
       <>

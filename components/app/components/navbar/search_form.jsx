@@ -1,6 +1,5 @@
 import React from 'react';
-import {MDBCollapse, MDBIcon, MDBInput, MDBNavbarNav, MDBNavItem} from "mdbreact";
-import {search} from "../../../../_helpers"
+import {MDBCollapse, MDBIcon, MDBInput, MDBNavbarNav} from "mdbreact";
 import Router from "next/router";
 
 class SearchForm extends React.Component {
@@ -31,7 +30,6 @@ class SearchForm extends React.Component {
         query: this.state.value
       }
     });
-    // search(this.props.history, this.props.location, this.state.value);
   }
 
   toggleSearch = () => {
@@ -58,8 +56,8 @@ class SearchForm extends React.Component {
 
   render() {
     return (
-      <MDBNavbarNav left >
-        <form onSubmit={this.handleSubmit} className="nav-item form-inline" >
+      <MDBNavbarNav left>
+        <form onSubmit={this.handleSubmit} className="nav-item form-inline">
           <MDBCollapse
             id={"searchFormCollapse"}
             isOpen={this.state.collapseOpen}
