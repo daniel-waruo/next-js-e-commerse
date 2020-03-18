@@ -1,15 +1,15 @@
 // IMPORT MD-BOOTSTRAP CSS
-import '@fortawesome/fontawesome-free/css/all.min.css'
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import '../assets/css/mdb-pro.css';
 import '../assets/css/dist/style.css';
 import React from 'react';
 import Head from 'next/head';
-import {DefaultSeo} from 'next-seo'
-import {AppLayout} from "../components/app";
-import {withApollo} from "../lib/apollo";
+import {DefaultSeo} from 'next-seo';
+import {MainFooter} from '../components/global/footer'
 
 // This default export is required in a new `pages/_app.js` file.
 function App({Component, pageProps}) {
+
   return (
     <>
       <Head>
@@ -24,12 +24,12 @@ function App({Component, pageProps}) {
           "in Kenya."
         }
       />
-
-      <AppLayout>
-        <Component {...pageProps} />
-      </AppLayout>
+      <Component {...pageProps} />
+      <div className={"overflow-hidden"}>
+        <MainFooter/>
+      </div>
     </>
   )
 }
 
-export default withApollo({ssr: false})(App)
+export default App

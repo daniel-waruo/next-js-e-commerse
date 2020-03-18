@@ -5,6 +5,12 @@ import SearchForm from "./search_form";
 import UserInfoDropdown from "./userInfoDropdown";
 import Link from 'next/link'
 import CartNavItem from "./cartNavItem"
+import {APP_QUERY} from "../../queries";
+import compose from "lodash.flowright";
+import {graphql} from "react-apollo";
+import gql from "graphql-tag";
+import CartDialog from "../cartAddDialog"
+import ProductDialog from "../productDialog"
 
 const style = (
   <style>
@@ -49,6 +55,7 @@ class MainNavbar extends Component {
   };
 
   render() {
+
     const overlay = (
       <div
         style={{
@@ -61,8 +68,22 @@ class MainNavbar extends Component {
       />
     );
     const {collapseID} = this.state;
+    const {
+      data: {
+        loading,
+        error,
+        user,
+        cart,
+        productDialog,
+        cartDialog
+      }
+    } = this.props;
 
-    const {cart, loading} = this.props;
+    //if (loading) return <SpinnerLoader/>;
+
+    if (error) {
+      console.log(error);
+    }
 
     return (
       <>
@@ -125,16 +146,27 @@ class MainNavbar extends Component {
               <MDBNavItem className={"nav-item-mobile"}>
                 <UserInfoDropdown
                   logout={this.props.logout}
-                  user={this.props.user}
+                  user={user}
                 />
               </MDBNavItem>
             </MDBNavbarNav>
           </MDBCollapse>
         </MDBNavbar>
         {collapseID ? overlay : null}
+        <ProductDialog loading={loading} productDialog={productDialog}/>
+        <CartDialog loading={loading} cartDialog={cartDialog}/>
       </>
     );
   }
 }
 
-export default MainNavbar;
+export default compose(
+  graphql(APP_QUERY),
+  graphql(
+    gql`
+      mutation Logout{
+        logout @client
+      }
+    `, {name: 'logout'}
+  )
+)(MainNavbar)

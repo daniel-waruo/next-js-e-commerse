@@ -3,6 +3,7 @@ import gql from 'graphql-tag';
 export const cartQuery = gql`
     query {
         cart{
+            id
             products{
               product{
                 id

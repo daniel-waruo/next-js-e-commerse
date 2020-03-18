@@ -8,7 +8,11 @@ export const APP_QUERY = gql`
           email
       }
       cart{
+          id
           number
+          products{
+            id
+          }
       }
       productDialog @client {
         visible

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default class SpinnerLoader extends React.Component {
+export default class SpinnerLoader extends React.PureComponent {
   render() {
     const style = {
       position: "fixed",
@@ -10,7 +10,9 @@ export default class SpinnerLoader extends React.Component {
     return (
       <div className={"d-flex justify-content-center h-100"}>
         <div className="spinner-border text-primary" style={style} role="status">
-          <span className="sr-only">Loading...</span>
+          <span className="sr-only">
+            Loading...
+          </span>
         </div>
       </div>
     );

@@ -1,4 +1,4 @@
-import {Component} from 'react';
+import React,{Component} from 'react';
 import {MDBBtn, MDBIcon, MDBModal, MDBModalBody, MDBModalFooter, MDBModalHeader} from 'mdbreact';
 import {addToCart, removeCartDialog, showCartDialog} from '../queries';
 import {graphql} from 'react-apollo'

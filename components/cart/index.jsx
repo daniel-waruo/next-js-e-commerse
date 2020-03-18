@@ -105,7 +105,10 @@ class CartPage extends Component {
     // look for a Server Error Page
     if (error) return null;
 
-    if (!cart.products.length) {
+    if (!cart)
+      return null;
+
+    if (!cart.products.length)
       return (
         <>
           <NextSeo
@@ -114,8 +117,8 @@ class CartPage extends Component {
           />
           <EmptyCart/>
         </>
-      )
-    }
+      );
+
     return (
       <>
         <NextSeo
@@ -145,8 +148,7 @@ class CartPage extends Component {
 
 export default compose(
   graphql(
-    cartQuery,
-    {options: {fetchPolicy: 'network-only'}}
+    cartQuery
   ),
   graphql(removeFromCart, {name: 'removeFromCart'}),
   graphql(updateCart, {name: 'updateCart'})

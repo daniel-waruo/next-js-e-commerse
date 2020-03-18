@@ -1,4 +1,4 @@
-import {Component} from "react";
+import React, {Component} from "react";
 import {MDBBtn, MDBCol, MDBIcon, MDBModal, MDBRow} from "mdbreact";
 import DialogPanel from './dialogPanel'
 import {graphql, Query} from 'react-apollo';
@@ -61,7 +61,12 @@ class ProductDialog extends Component {
         },
         refetchQueries: [
           {query: APP_QUERY},
-          {query: PRODUCT_QUERIES}]
+          {
+            query: PRODUCT_QUERIES,
+            variables: {
+              productID: productID
+            }
+          }]
       })
     }
 
@@ -72,7 +77,7 @@ class ProductDialog extends Component {
           productName: productName
         }
       }).then(
-      data => {
+      () => {
         this.props.removeDialog()
       }
     );
@@ -113,7 +118,7 @@ class ProductDialog extends Component {
                       <DialogPanel
                         product={product}
                         handleChange={this.handleChange}
-                        addToCart={e => this.addToCart(product.inCart, product.name)}
+                        addToCart={() => this.addToCart(product.inCart, product.name)}
                         removeDialog={this.props.removeDialog}/>
                     </div>
                   </MDBCol>
