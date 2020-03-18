@@ -28,6 +28,7 @@ class SearchForm extends React.Component {
   };
 
   render() {
+    const {displayFilter} = this.props;
     return (
       <form onSubmit={this.onSubmit}>
         <MDBRow center>
@@ -45,9 +46,13 @@ class SearchForm extends React.Component {
             />
           </MDBCol>
           <MDBCol size={"12"} md={"9"} className={"text-center"}>
-            <MDBBtn outline onClick={this.props.toggleSideNav} className={"rounded-pill"}>
-              <MDBIcon icon={"sliders-h"}/>
-              <span className={"mx-2"}>Filter</span>
+            <MDBBtn
+              outline
+              onClick={this.props.toggleSideNav}
+              style={{display: displayFilter ? "" : "none"}}
+              className={"rounded-pill"}>
+              <MDBIcon icon={"filter"}/>
+              <span className={"mx-2"}>Filters</span>
             </MDBBtn>
             <MDBBtn outline type={"submit"} color={"primary"} className={"rounded-pill"}>
               <MDBIcon icon={"search"}/>

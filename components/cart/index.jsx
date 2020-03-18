@@ -112,7 +112,7 @@ class CartPage extends Component {
       return (
         <>
           <NextSeo
-            title={"CART EMPTY"}
+            title={"Empty Cart"}
             index={false}
           />
           <EmptyCart/>
@@ -122,7 +122,7 @@ class CartPage extends Component {
     return (
       <>
         <NextSeo
-          title={"CART"}
+          title={"Cart"}
           index={false}
         />
         <div className={"page"}>

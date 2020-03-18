@@ -47,7 +47,7 @@ class Login extends Component {
     return (
       <>
         <NextSeo
-          title={"LOGIN"}
+          title={"Login"}
           description={
             "Login into Next JS E-commerce using our secure social login feature." +
             "Login through FaceBook , Google and Instagram"

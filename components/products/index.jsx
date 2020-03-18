@@ -2,7 +2,7 @@ import {withRouter} from "next/router";
 import compose from "lodash.flowright";
 import {PRODUCTS_QUERY} from "./queries";
 import React from 'react'
-import {MDBBtn, MDBContainer} from 'mdbreact'
+import {MDBBtn, MDBContainer, MDBIcon} from 'mdbreact'
 import './index.css'
 import {ProductView, RangeSlider, SideNav, SpinnerLoader} from "../../components/global"
 import {graphql} from "react-apollo";
@@ -79,8 +79,10 @@ class ProductsPage extends React.Component {
       query.maxPrice = max;
       query.minPrice = min;
     }
+    const category = query.category;
+    delete query.category;
     this.props.router.push({
-      pathname: "/products",
+      pathname: `/products/${category}`,
       query: query
     })
   };
@@ -92,16 +94,19 @@ class ProductsPage extends React.Component {
       transition: "margin-left .5s",
     };
     const {data: {loading, error, filterProducts}} = this.props;
-    const {query: {category}} = this.props.router;
+    //const {query: {category}} = this.props.router;
 
     if (loading) return <SpinnerLoader/>;
     if (error) return "Error";
-    const {filterPrice: {min, max}} = filterProducts;
-
-    const CategoryProductFilterMessage = category ? "Category Filter Products Not Available" : null;
+    const {filterPrice: {min, max}, category} = filterProducts;
+    const {name, description} = category || {name: "", description: ""};
+    const displayFilter = !(Boolean(category) && (min === max));
     return (
       <>
-        <NextSeo title={category || this.props.title}/>
+        <NextSeo
+          title={name || this.props.title}
+          description={description}
+        />
         <div className={"page overflow-hidden"}>
           <MDBContainer fluid>
             <SideNav toggleFunction={this.toggleSideNav} isOpen={this.state.sideNavOpen}>
@@ -114,12 +119,12 @@ class ProductsPage extends React.Component {
                                 updateFilter={this.updateCategoryFilter}
                                 categories={this.state.categories}/>
                 <div className={"text-center"}>
-                  {CategoryProductFilterMessage}
                   <MDBBtn outline
                           onClick={this.applyFilters}
                           className={"rounded-pill mx-auto my-5"}
-                          style={{display: category ? "none" : "block"}}>
-                    APPLY FILTERS
+                          style={{display: displayFilter ? "" : "none"}}>
+                    <MDBIcon icon={"sliders-h"}/>
+                    <span className={"mx-2"}>APPLY FILTERS</span>
                   </MDBBtn>
                 </div>
               </div>
@@ -127,8 +132,8 @@ class ProductsPage extends React.Component {
           </MDBContainer>
           <div style={divStyle} className={"sidenav-main"}>
             <MDBContainer>
-              <h1 className={"text-center text-capitalize h-100"}>{category || "Products"}</h1>
-              <SearchForm toggleSideNav={this.toggleSideNav}/>
+              <h1 className={"text-center text-capitalize h-100"}>{name || "Products"}</h1>
+              <SearchForm displayFilter={displayFilter} filterPrice={min !== max} toggleSideNav={this.toggleSideNav}/>
               <ProductView data={this.props.data}/>
             </MDBContainer>
           </div>

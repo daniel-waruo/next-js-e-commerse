@@ -22,6 +22,10 @@ export const PRODUCTS_QUERY = gql`
           }
         }
       }
+      category{
+        name
+        description
+      }
       filterPrice {
         min
         max

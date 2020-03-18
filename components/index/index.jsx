@@ -29,7 +29,7 @@ class Home extends Component {
     return (
       <>
         <NextSeo
-          title={"HOME"}
+          title={"Home"}
           description={
             "Next JS E-commerce by Daniel Waruo is an e-commerce store developed " +
             "by Daniel Waruo for B2C model businesses.One cannot make real purchases of the products"
