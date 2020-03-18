@@ -8,6 +8,7 @@ import {ProductView, RangeSlider, SideNav, SpinnerLoader} from "../../components
 import {graphql} from "react-apollo";
 import {CategoryFilter, SearchForm} from "./components";
 import {NextSeo} from 'next-seo';
+import {filter} from "../../_helpers";
 
 class ProductsPage extends React.Component {
   static defaultProps = {
@@ -17,15 +18,13 @@ class ProductsPage extends React.Component {
   constructor(props) {
     super(props);
     // get categories from query string
-    const {categories} = props.router.query;
+    const {categories, min, max} = props.router.query;
     // set initial state
     this.state = {
       sideNavOpen: false,
       categories: categories || [],
-      price: {
-        min: undefined,
-        max: undefined
-      }
+      min: min || undefined,
+      max: max || undefined
     }
   }
 
@@ -38,10 +37,8 @@ class ProductsPage extends React.Component {
 
   updatePriceFilter = (min, max) => {
     this.setState({
-      price: {
-        max: max,
-        min: min
-      }
+      max: max,
+      min: min
     })
   };
 
@@ -71,19 +68,10 @@ class ProductsPage extends React.Component {
     e.preventDefault();
     // call the filter function to push the filters to the url
     // get query
-    let {query} = this.props.router;
-    const {categories, price: {min, max}} = this.state;
-    query.categories = categories;
-
-    if (min !== undefined || max !== undefined) {
-      query.maxPrice = max;
-      query.minPrice = min;
-    }
-    const category = query.category;
-    delete query.category;
-    this.props.router.push({
-      pathname: `/products/${category}`,
-      query: query
+    let {router} = this.props;
+    const {categories, min, max} = this.state;
+    filter(router, {
+      categories, min, max
     })
   };
 
@@ -99,8 +87,10 @@ class ProductsPage extends React.Component {
     if (loading) return <SpinnerLoader/>;
     if (error) return "Error";
     const {filterPrice: {min, max}, category} = filterProducts;
+
     const {name, description} = category || {name: "", description: ""};
     const displayFilter = !(Boolean(category) && (min === max));
+
     return (
       <>
         <NextSeo
@@ -112,7 +102,12 @@ class ProductsPage extends React.Component {
             <SideNav toggleFunction={this.toggleSideNav} isOpen={this.state.sideNavOpen}>
               <div className={"h3 nav-link text-white text-capitalize text-center"}>Filters</div>
               <div className={"text-white w-100"}>
-                <RangeSlider title={"Price"} min={min} max={max} minPrice={min} maxPrice={max} step={1}
+                <RangeSlider title={"Price"}
+                             min={this.state.min}
+                             max={this.state.max}
+                             minPrice={min}
+                             maxPrice={max}
+                             step={1}
                              updateFilter={this.updatePriceFilter} data={this.props.data}/>
                 <CategoryFilter data={this.props.data}
                                 category={category}
@@ -145,14 +140,14 @@ class ProductsPage extends React.Component {
 
 const getVariables = props => {
   // get the categories and query from parsed query string object
-  const {category, categories, query, maxPrice, minPrice} = props.router.query;
+  const {category, categories, query, max, min} = props.router.query;
   // return query variables
   return {
     slugs: category ? [category] : undefined,
     ids: categories || [],
     query: query,
-    maxPrice: maxPrice,
-    minPrice: minPrice
+    max: max,
+    min: min
   }
 };
 

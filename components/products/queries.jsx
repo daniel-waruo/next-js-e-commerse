@@ -1,8 +1,8 @@
 import gql from "graphql-tag";
 
 export const PRODUCTS_QUERY = gql`
-  query FilterProducts($ids: [String], $slugs: [String], $query: String) {
-    filterProducts(query: $query, categoryIds: $ids, categorySlugs: $slugs) {
+  query FilterProducts($ids: [String], $slugs: [String], $query: String ,$min:String ,$max:String) {
+    filterProducts(query: $query, categoryIds: $ids, categorySlugs: $slugs,min:$min,max:$max) {
       products {
         edges {
           node {

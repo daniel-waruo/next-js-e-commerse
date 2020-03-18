@@ -15,10 +15,10 @@ class RangeSlider extends Component {
 
   constructor(props) {
     super(props);
-    const {min, max} = props;
+    const {min, max, maxPrice, minPrice} = props;
     this.state = {
-      min: min,
-      max: max,
+      min: min || minPrice,
+      max: max || maxPrice,
     }
   }
 
@@ -35,9 +35,10 @@ class RangeSlider extends Component {
   };
 
   render() {
-    const {min, max, maxPrice, minPrice} = this.props,
+    const {maxPrice, minPrice} = this.props,
+      {min, max,} = this.state,
       domain = [minPrice, maxPrice],
-      defaultValues = [min, max];
+      defaultValues = [min || minPrice, max || maxPrice];
 
     if (minPrice === maxPrice)
       return null;
@@ -48,7 +49,7 @@ class RangeSlider extends Component {
         <div className={"text-white px-4"}>
           <p className={"py-1"}>
             <span className={"h5 test-bold"}>{this.props.title}</span>
-            | KSh {this.state.min} - Ksh {this.state.max}</p>
+            | KSh {min} - Ksh {max}</p>
           <div style={{height: 50, width: "100%"}}>
             <Slider
               mode={1}

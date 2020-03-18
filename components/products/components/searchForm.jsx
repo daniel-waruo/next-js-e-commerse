@@ -1,6 +1,7 @@
 import {MDBBtn, MDBCol, MDBIcon, MDBInput, MDBRow} from "mdbreact";
 import React from "react"
 import {withRouter} from "next/router";
+import {filter} from "../../../_helpers";
 
 class SearchForm extends React.Component {
   constructor(props) {
@@ -19,11 +20,9 @@ class SearchForm extends React.Component {
   onSubmit = e => {
     e.preventDefault();
     // get query
-    let {query} = this.props.router;
-    query.query = this.state.value;
-    this.props.router.push({
-      pathname: "/products",
-      query: query
+    let {router} = this.props;
+    filter(router, {
+      query: this.state.value
     })
   };
 
