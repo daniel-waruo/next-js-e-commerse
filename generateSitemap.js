@@ -10,13 +10,6 @@ const generator = SitemapGenerator(
     stripQuerystring: false
   }
 );
-const crawler = generator.getCrawler();
-const sitemap = generator.getSitemap();
-
-// Add static URL on crawl init.
-crawler.on('crawlstart', () => {
-  sitemap.addURL('/products')
-});
 
 // register event listeners
 generator.on('done', () => {
