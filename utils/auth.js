@@ -32,6 +32,7 @@ export const logout = () => {
 };
 
 export const withAuthSync = WrappedComponent => {
+
   const Wrapper = props => {
     const syncLogout = event => {
       if (event.key === 'logout') {

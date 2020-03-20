@@ -1,6 +1,6 @@
 import React from 'react'
 import {AccountCard, AccountSideNav} from './components'
-import {MDBCol, MDBContainer, MDBIcon, MDBListGroup, MDBListGroupItem, MDBRow} from 'mdbreact'
+import {MDBCol, MDBContainer, MDBRow} from 'mdbreact'
 import {graphql} from 'react-apollo';
 import {userQuery} from "./queries";
 import SpinnerLoader from "../global/loaders/spinnerLoader";
@@ -15,7 +15,6 @@ class Account extends React.Component {
   };
 
   render() {
-    const listClass = "border border-0";
     const {
       data: {
         loading,
@@ -32,35 +31,11 @@ class Account extends React.Component {
       <>
         <div className={"mx-2"}>
           <MDBRow>
-            <MDBCol md={"3"} className={"d-none d-md-block"}>
-              <MDBContainer className={"z-depth-1 px-0"}>
-                <AccountSideNav isOpen={this.state.isOpen} width={400}>
-                  <MDBListGroup>
-                    <MDBListGroupItem active hover className={listClass}>
-                      <MDBIcon far icon={"user"} className={"mr-2"}/>
-                      My Account
-                    </MDBListGroupItem>
-                    <MDBListGroupItem hover className={listClass}>
-                      <MDBIcon fas icon={"clipboard-list"} className={"mr-2"}/>
-                      Orders
-                    </MDBListGroupItem>
-                    <MDBListGroupItem hover className={listClass}>
-                      <MDBIcon fas icon={"user-edit"} className={"mr-2"}/>
-                      Edit Account Info
-                    </MDBListGroupItem>
-                    <MDBListGroupItem hover className={listClass}>
-                      <MDBIcon fas icon={"address-book"} className={"mr-2"}/>
-                      Address Book
-                    </MDBListGroupItem>
-                    <MDBListGroupItem hover className={listClass}>
-                      <MDBIcon fas icon={"link"} className={"mr-2"}/>
-                      Linked Accounts
-                    </MDBListGroupItem>
-                  </MDBListGroup>
-                </AccountSideNav>
-              </MDBContainer>
-            </MDBCol>
-            <MDBCol size={"12"} md={"9"}>
+            <AccountSideNav toggleFunction={this.toggleFunction}
+                            isOpen={this.state.isOpen}
+                            active={"account"}
+                            className={"z-depth-1 px-0"}/>
+            <MDBCol size={"12"} lg={"9"}>
               <MDBContainer className={"z-depth-1 f-85"}>
                 <h1 className={"text-center text-bold"}>Account Overview</h1>
                 <MDBRow center>
