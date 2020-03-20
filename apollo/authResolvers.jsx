@@ -6,7 +6,7 @@ import Router from 'next/router'
 
 const login = token => {
   // set token cookie
-  cookie.set('token', token, {expires: 1});
+  cookie.set('token', token, {expires: 2});
   Router.push("/")
 };
 
@@ -77,6 +77,7 @@ export default {
       },
       success: data => {
         // store token in local storage
+        console.log(data);
         login(data.token);
       },
       error: error => {

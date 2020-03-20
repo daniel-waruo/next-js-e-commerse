@@ -9,11 +9,12 @@ class SideNav extends React.Component {
   };
 
   render() {
+    const className = this.props.className || "";
     const classes = (this.props.isOpen) ? "sidenav-open" : "";
     return (
       <>
-        <style>{styling}</style>
-        <div className={"sidenav " + classes}>
+        <style>{styling({width: 300})}</style>
+        <div className={"sidenav " + classes + className}>
         <span className="closebtn" style={{color: "white", cursor: 'pointer'}}
               onClick={this.props.toggleFunction}>&times;</span>
           {this.props.children}
@@ -22,10 +23,11 @@ class SideNav extends React.Component {
     )
   }
 }
-class SideMenu extends React.Component{
-  render(){
+
+class SideMenu extends React.Component {
+  render() {
     const divStyling = {
-      position:"relative",
+      position: "relative",
     };
     return (
       <div className={"f-100 bg-dark"}>
@@ -33,4 +35,5 @@ class SideMenu extends React.Component{
     )
   }
 }
+
 export {SideNav};

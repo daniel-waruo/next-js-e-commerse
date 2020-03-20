@@ -38,7 +38,7 @@ class Login extends Component {
 
     // if user redirect to  redirect home or next
     //TODO : implement next
-    if (user) {
+    if (user && typeof window !== "undefined") {
       // redirect to home if there is user
       Router.push('/')
     }

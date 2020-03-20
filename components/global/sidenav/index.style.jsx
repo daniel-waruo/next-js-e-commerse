@@ -1,4 +1,4 @@
-export default
+export default ({width} = {width:250} ) =>
 `
 .sidenav {
   height: 100%;
@@ -14,7 +14,7 @@ export default
 }
 
 .sidenav-open {
-  width: 250px;
+  width: ${width}px;
 }
 
 .sidenav.navlink {
