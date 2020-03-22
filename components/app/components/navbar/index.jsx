@@ -22,9 +22,6 @@ const style = (
         .center-brand{
           width:100%!important;
         }
-        .nav-link:hover{
-          background-color:#fefefe ;
-        }
         .nav-item-mobile{
           padding-left:40%;
         }
