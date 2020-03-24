@@ -13,7 +13,7 @@ class UserInfoDropdown extends React.Component {
 
   render() {
     const user = this.props.user;
-    const dropDownItems = (user !== null) ?
+    const dropDownItems = user ?
       (<>
         <Link href="/account">
           <a className={"dropdown-item text-center"}>

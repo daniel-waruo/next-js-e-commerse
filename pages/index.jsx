@@ -1,4 +1,4 @@
-import {withApollo} from "../lib/apollo";
+import {withApollo} from "../apollo";
 import {HomePage} from "../components/index";
 import {withApp} from "../components/app";
 

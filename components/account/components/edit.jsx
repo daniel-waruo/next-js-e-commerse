@@ -14,11 +14,13 @@ const UserEditField = (props) => {
 
 const ButtonLoader = props => {
   const {width, height} = props;
+
   const style = {
-    width, height
+    width: width || "1rem",
+    height: height || "1rem"
   };
   return (
-    <div className="spinner-border text-primary float-left" style={style} role="status">
+    <div className="spinner-border text-primary mx-3" style={style} role="status">
       <span className="sr-only">
         Loading...
       </span>
@@ -48,15 +50,15 @@ export class UserEditForm extends React.Component {
       email,
       loading: false
     }
-  }
+  };
 
   changeState = (field, value) => {
     const state = this.state;
     state[field] = value;
     this.setState(state)
   };
-  onSubmit = e => {
 
+  onSubmit = e => {
     // prevent default submit action
     e.preventDefault();
     // show loading state
@@ -65,23 +67,29 @@ export class UserEditForm extends React.Component {
     this.props.editUserInformation(
       {variables: this.state}
     ).then((data) => {
-
-        console.log(data);
         // set state of loader as false
         this.setState({loading: false})
       }
-    ).catch((res) => {
+    ).catch(
+      (res) => {
         const errors = res.graphQLErrors.map(
           error => {
-            JSON.parse(error)
+            return {
+              __typename: "Message",
+              text: error.message,
+              type: "warning"
+            }
           }
         );
-        console.log(errors);
+        this.props.addMessage({
+          variables: {
+            messages: errors
+          }
+        });
         // set state of loader as false
         this.setState({loading: false})
       }
     )
-    // this.props.editUserInformation(this.state)
   };
 
   render() {

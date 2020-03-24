@@ -1,5 +1,5 @@
 import React from 'react';
-import {withApollo} from "../lib/apollo";
+import {withApollo} from "../apollo/lib/apollo";
 import Login from "../components/login";
 import {withApp} from "../components/app";
 

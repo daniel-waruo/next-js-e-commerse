@@ -1,4 +1,4 @@
-import {withApollo} from "../../lib/apollo";
+import {withApollo} from "../../apollo";
 import AccountEdit from "../../components/account/edit";
 import {withApp} from "../../components/app/index";
 import {withAuthSync} from "../../utils/auth";

@@ -1,16 +1,18 @@
 import ApolloLinkTimeout from 'apollo-link-timeout';
 import {ApolloClient} from 'apollo-client'
-import {resolvers, typeDefs} from "../apollo/index";
-import {GRAPHQL_ENDPOINT} from "../_constants";
-import {ApolloLink, concat, split} from 'apollo-link';
-import fetch from 'isomorphic-unfetch';
-import nextCookie from 'next-cookies'
-import {initCache} from './init-cache'
-import cookie from 'js-cookie';
 import {onError} from "apollo-link-error";
 import {BatchHttpLink} from "apollo-link-batch-http";
+import {ApolloLink, concat, split} from 'apollo-link';
 
-global.fetch = fetch;
+import fetch from 'isomorphic-unfetch';
+
+import nextCookie from 'next-cookies'
+import cookie from 'js-cookie';
+
+import resolvers from "./resolvers";
+import types from "./types"
+import {GRAPHQL_ENDPOINT} from "../_constants";
+import {initCache} from './lib/init-cache'
 
 
 export default function createApolloClient(initialState, ctx) {
@@ -20,6 +22,7 @@ export default function createApolloClient(initialState, ctx) {
     credentials: 'include',// set credentials like include
     connectToDevTools: process.env.NODE_ENV !== 'production', // if in development connect to Dev tools
     queryDeduplication: true, // set query deduplication to true
+    fetch
   });
 
   // create an authentication middleware
@@ -101,6 +104,7 @@ export default function createApolloClient(initialState, ctx) {
     batchHttpLink = errorLink.concat(timeoutLink.concat(batchHttpLink));
     console.info("batch link sent to the server");
   }
+
   // The `ctx` (NextPageContext) will only be present on the server.
   // use it to extract auth headers (ctx.req) or similar.
   return new ApolloClient({
@@ -111,7 +115,7 @@ export default function createApolloClient(initialState, ctx) {
       authMiddleware.concat(session),
       batchHttpLink
     ),
-    typeDefs,
+    typeDefs: types,
     resolvers
   });
 }

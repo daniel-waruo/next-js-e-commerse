@@ -158,8 +158,6 @@ export class AccountLayout extends React.Component {
 export const redirectNoUser =
   () => {
     if (typeof window !== "undefined") {
-      // remove the token
-      cookie.remove("token");
       // redirect to login
       Router.push("/login");
     }

@@ -11,6 +11,7 @@ export const initialClientStateCache = {
     productID: null
   },
   loginErrors: null,
-  registerErrors: null
+  registerErrors: null,
 
+  messages:null
 };

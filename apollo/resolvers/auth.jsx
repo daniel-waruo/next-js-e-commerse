@@ -1,6 +1,6 @@
-import {LOGIN_URL, LOGOUT_URL, REGISTER_URL} from "../_constants";
-import {parseError} from "../_helpers";
-import {request} from '../_request';
+import {LOGIN_URL, LOGOUT_URL, REGISTER_URL} from "../../_constants";
+import {parseError} from "../../_helpers";
+import {request} from '../../_request';
 import cookie from 'js-cookie'
 import Router from 'next/router'
 

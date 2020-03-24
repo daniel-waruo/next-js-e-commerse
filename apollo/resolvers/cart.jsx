@@ -1,5 +1,5 @@
-import {ADD_TO_CART_URL, REMOVE_FROM_CART_URL, UPDATE_CART} from "../_constants";
-import {request} from '../_request';
+import {ADD_TO_CART_URL, REMOVE_FROM_CART_URL, UPDATE_CART} from "../../_constants";
+import {request} from '../../_request';
 
 export default {
   addToCart: async (obj, args, {cache}, info) => {
