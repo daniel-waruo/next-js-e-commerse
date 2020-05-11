@@ -1,21 +1,15 @@
-import React,{Component} from 'react';
+import React from 'react';
 import {MDBBtn, MDBIcon, MDBModal, MDBModalBody, MDBModalFooter, MDBModalHeader} from 'mdbreact';
-import {addToCart, removeCartDialog, showCartDialog} from '../queries';
+import {addToCart, removeCartDialog, showCartDialog} from './queries';
 import {graphql} from 'react-apollo'
 import compose from 'lodash.flowright'
 import Link from 'next/link'
+import gql from 'graphql-tag'
 
+class AddedToCartModal extends React.PureComponent {
 
-class CartAddDialog extends Component {
-  static defaultProps = {
-    cartDialog: {
-      visible: false,
-      status: null,
-      productName: null
-    }
-  };
   toggle = () => {
-    const {visible, status} = this.props.cartDialog;
+    const {cartDialog: {visible, status}} = this.props.data;
     if (visible) {
       this.props.removeCartDialog()
     }
@@ -30,9 +24,11 @@ class CartAddDialog extends Component {
 
   render() {
 
-    const {cartDialog, loading} = this.props;
+    const {data: {cartDialog, loading, error}} = this.props;
 
     if (loading) return null;
+
+    if (error) return null;
 
     const {visible, status, productName} = cartDialog;
     if (visible === true) {
@@ -87,12 +83,21 @@ class CartAddDialog extends Component {
   }
 }
 
-
+const addedToCartModalQueries = gql`
+  query {
+    cartDialog @client{
+      visible
+      status
+      productName
+    }
+  }
+`;
 const withApollo = compose(
+  graphql(addedToCartModalQueries),
   graphql(removeCartDialog, {name: 'removeCartDialog'}),
   graphql(addToCart, {name: 'addToCart'}),
   graphql(showCartDialog, {name: 'showCartDialog'})
 );
 
-export default withApollo(CartAddDialog);
+export default withApollo(AddedToCartModal);
 

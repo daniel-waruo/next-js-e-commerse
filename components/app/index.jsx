@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import MainNavbar from "./components/navbar";
+import MainNavbar from "./MainNavbar";
+import ProductModal from "./ProductModal"
+import AddedToCartModal from "./AddedToCartModal"
 
 class App extends Component {
 
@@ -16,6 +18,8 @@ class App extends Component {
     return (
       <>
         <MainNavbar/>
+        <ProductModal/>
+        <AddedToCartModal/>
         <main style={mainStyle}>
           {this.props.children}
         </main>

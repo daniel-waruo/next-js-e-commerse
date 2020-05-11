@@ -2,9 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38d6c4b7-e263-4646-a63b-27f18fe4d77f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/app/MainNavbar/UserInfoDropdown.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/app/ProductModal.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/global/products/product.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/global/products/product.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/app/components/cartAddDialog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/app/AddedToCartModal.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/app/components/dialogPanel.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/app/components/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/app/components/navbar/cartNavItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/app/MainNavbar/CartNavItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/app/components/navbar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/app/MainNavbar/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/app/components/navbar/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/components/app/MainNavbar/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/app/components/navbar/search_form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/app/MainNavbar/SearchForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/app/components/navbar/statusBar.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/app/components/navbar/userInfoDropdown.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/app/components/productDialog.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/app/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/app/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/product/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/product/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/products/components/searchForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/products/components/SearchForm.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,53 +44,7 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/product/index.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="93" selection-start-line="93" selection-end-line="93" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/products/index.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="131" column="24" selection-start-line="131" selection-start-column="24" selection-end-line="131" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="products.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/global/products/products.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="product.jsx" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/components/global/products/product.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -89,7 +56,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>venv</find>
       <find>LoginVi</find>
       <find>helpers</find>
       <find>s</find>
@@ -119,6 +85,7 @@
       <find>checkout</find>
       <find>initialProps</find>
       <find>onChange</find>
+      <find>change</find>
     </findStrings>
     <replaceStrings>
       <replace>.</replace>
@@ -145,13 +112,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/components/global/products/products.jsx" />
-        <option value="$PROJECT_DIR$/../e-commerse-api/client/products/queries.py" />
-        <option value="$PROJECT_DIR$/../e-commerse-api/client/products/utils.py" />
-        <option value="$PROJECT_DIR$/components/app/components/dialogPanel.jsx" />
-        <option value="$PROJECT_DIR$/pages/products/[category]/index.jsx" />
-        <option value="$PROJECT_DIR$/components/login/components/socialLogin.jsx" />
-        <option value="$PROJECT_DIR$/components/login/components/loginForm.jsx" />
         <option value="$PROJECT_DIR$/components/cart/components/cart.jsx" />
         <option value="$PROJECT_DIR$/apollo/productResolver.jsx" />
         <option value="$PROJECT_DIR$/../e-commerse-api/client/cart/utils.py" />
@@ -159,7 +119,6 @@
         <option value="$PROJECT_DIR$/components/product/queries.jsx" />
         <option value="$PROJECT_DIR$/components/app/components/index.jsx" />
         <option value="$PROJECT_DIR$/apollo/typeDef.jsx" />
-        <option value="$PROJECT_DIR$/components/app/queries.jsx" />
         <option value="$PROJECT_DIR$/pages/cart.jsx" />
         <option value="$PROJECT_DIR$/pages/products/[category]/[slug].jsx" />
         <option value="$PROJECT_DIR$/pages/_document.js" />
@@ -167,7 +126,6 @@
         <option value="$PROJECT_DIR$/utils/auth.js" />
         <option value="$PROJECT_DIR$/../with-cookie-auth-app/pages/profile.js" />
         <option value="$PROJECT_DIR$/components/app/components/cartAddDialog.jsx" />
-        <option value="$PROJECT_DIR$/components/app/components/productDialog.jsx" />
         <option value="$PROJECT_DIR$/pages/index.jsx" />
         <option value="$PROJECT_DIR$/apolloClient.js" />
         <option value="$PROJECT_DIR$/lib/init-cache.js" />
@@ -181,7 +139,6 @@
         <option value="$PROJECT_DIR$/../e-commerse-api-cookie-auth/client/cart/schema.py" />
         <option value="$PROJECT_DIR$/../e-commerse-api-cookie-auth/client/cart/utils.py" />
         <option value="$PROJECT_DIR$/../e-commerse-api-cookie-auth/client/cart/api.py" />
-        <option value="$PROJECT_DIR$/components/app/components/navbar/index.jsx" />
         <option value="$PROJECT_DIR$/pages/_app.js" />
         <option value="$PROJECT_DIR$/../e-commerse-api-cookie-auth/root/settings/components/cors_configuration.py" />
         <option value="$PROJECT_DIR$/lib/apollo.js" />
@@ -190,12 +147,22 @@
         <option value="$PROJECT_DIR$/../e-commerse-api-cookie-auth/utils/session/middleware.py" />
         <option value="$PROJECT_DIR$/_request.jsx" />
         <option value="$PROJECT_DIR$/apollo/cartResolver.jsx" />
-        <option value="$PROJECT_DIR$/components/app/index.jsx" />
         <option value="$PROJECT_DIR$/components/app/components/navbar/userInfoDropdown.jsx" />
         <option value="$PROJECT_DIR$/apollo/authResolvers.jsx" />
         <option value="$PROJECT_DIR$/lib/apolloClient.js" />
-        <option value="$PROJECT_DIR$/components/product/index.jsx" />
         <option value="$PROJECT_DIR$/components/global/products/product.jsx" />
+        <option value="$PROJECT_DIR$/components/app/components/dialogPanel.jsx" />
+        <option value="$PROJECT_DIR$/components/app/components/productDialog.jsx" />
+        <option value="$PROJECT_DIR$/components/app/components/navbar/index.jsx" />
+        <option value="$PROJECT_DIR$/components/app/components/AddedToCartModal.jsx" />
+        <option value="$PROJECT_DIR$/components/app/queries.jsx" />
+        <option value="$PROJECT_DIR$/components/app/components/MainNavbar/index.jsx" />
+        <option value="$PROJECT_DIR$/components/app/components/MainNavbar/UserInfoDropdown.jsx" />
+        <option value="$PROJECT_DIR$/components/app/components/ProductModal.jsx" />
+        <option value="$PROJECT_DIR$/components/app/index.jsx" />
+        <option value="$PROJECT_DIR$/components/app/ProductModal.jsx" />
+        <option value="$PROJECT_DIR$/components/ProductNumberInput.js" />
+        <option value="$PROJECT_DIR$/components/product/index.jsx" />
       </list>
     </option>
   </component>
@@ -213,10 +180,9 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="675" />
-    <option name="y" value="-8" />
-    <option name="width" value="699" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="width" value="877" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -225,6 +191,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -237,23 +204,10 @@
               <item name="next-js-e-commerse" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="next-js-e-commerse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="next-js-e-commerse" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="product" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="next-js-e-commerse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="next-js-e-commerse" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="products" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -268,16 +222,17 @@
     <key name="OPEN_URL_DIALOG">
       <recent name="https://github.com/Tivix/django-rest-auth.git" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Dan\Documents\Work\next-js-cookie-auth\lib" />
-      <recent name="C:\Users\Dan\Documents\Work\next-js-e-commerse\public" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Dan\Documents\Work\next-js-cookie-auth" />
       <recent name="C:\Users\Dan\Documents\Work\next-js-e-commerse\public" />
       <recent name="C:\Users\Dan\Documents\Work\next-js-e-commerse\static" />
       <recent name="C:\Users\Dan\Documents\Work\django-rest-auth\rest_auth" />
       <recent name="C:\Users\Dan\Documents\Work\next-js-e-commerse\pages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Dan\Documents\Work\next-js-e-commerse\components\app" />
+      <recent name="C:\Users\Dan\Documents\Work\next-js-cookie-auth\lib" />
+      <recent name="C:\Users\Dan\Documents\Work\next-js-e-commerse\public" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -506,25 +461,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32838285" />
-      <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.5015129" side_tool="true" weight="0.5132013" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.9207921" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.031353135" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.5132013" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4969743" weight="0.61551154" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2859304" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.32838285" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4969743" weight="0.41749176" />
+      <window_info anchor="bottom" id="TypeScript" order="13" weight="0.11881188" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21331316" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" weight="0.32980332" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39933994" />
-      <window_info anchor="bottom" id="TypeScript" order="13" weight="0.11881188" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -532,31 +485,32 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.7821782" />
+      <window_info anchor="bottom" id="Messages" order="12" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.9207921" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.22772278" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2859304" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28517398" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32838285" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="13" weight="0.11881188" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.5132013" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.7821782" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.031353135" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39933994" />
       <window_info anchor="right" id="Database" order="4" weight="0.32980332" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4969743" weight="0.61551154" />
-      <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.5015129" side_tool="true" visible="true" weight="0.5132013" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.5015129" side_tool="true" weight="0.5132013" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.9207921" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.7821782" />
       <window_info anchor="bottom" id="Messages" order="12" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -603,45 +557,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="11" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../with-cookie-auth-app/pages/profile.js" />
-    <entry file="file://$PROJECT_DIR$/components/login/components/socialLogin.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/apollo-cache-inmemory/lib/inMemoryCache.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/apollo-cache-inmemory/lib/inMemoryCache.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="126" column="6" selection-start-line="126" selection-start-column="6" selection-end-line="126" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index.jsx">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/initial-client-state.js" />
-    <entry file="file://$PROJECT_DIR$/../e-commerse-api-cookie-auth/root/settings/components/middleware.py" />
-    <entry file="file://$PROJECT_DIR$/../e-commerse-api-cookie-auth/utils/session/cached_db.py" />
-    <entry file="file://$PROJECT_DIR$/../e-commerse-api-cookie-auth/accounts/models.py" />
-    <entry file="file://$PROJECT_DIR$/../e-commerse-api-cookie-auth/client/cart/migrations/0002_auto_20200218_1007.py" />
-    <entry file="file://$PROJECT_DIR$/../e-commerse-api-cookie-auth/utils/session/migrations/0001_initial.py" />
-    <entry file="file://$PROJECT_DIR$/lib/init-cache.js" />
-    <entry file="file://$PROJECT_DIR$/components/app/components/navbar/statusBar.jsx">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../e-commerse-api-cookie-auth/accounts/schema.py" />
     <entry file="file://$PROJECT_DIR$/../e-commerse-api-cookie-auth/.env" />
     <entry file="file://$PROJECT_DIR$/../e-commerse-api-cookie-auth/client/cart/serializers.py" />
@@ -685,62 +604,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/app/components/navbar/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="140" column="31" selection-start-line="140" selection-start-column="31" selection-end-line="140" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apollo/cartResolver.jsx" />
     <entry file="file://$PROJECT_DIR$/apollo/authResolvers.jsx" />
     <entry file="file://$PROJECT_DIR$/../with-cookie-auth-app/utils/auth.js" />
-    <entry file="file://$PROJECT_DIR$/components/app/components/navbar/userInfoDropdown.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/app/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/et --hard HEADgit reset --hard HEAD" />
     <entry file="file://$PROJECT_DIR$/lib/apollo.js" />
     <entry file="file://$PROJECT_DIR$/lib/apolloClient.js" />
-    <entry file="file://$PROJECT_DIR$/components/app/components/cartAddDialog.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="87" column="1" selection-start-line="87" selection-start-column="1" selection-end-line="87" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/app/components/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/app/components/productDialog.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="114" column="27" selection-start-line="114" selection-start-column="27" selection-end-line="114" selection-end-column="27" />
-          <folding>
-            <element signature="n#!!block;n#constructor#0;n#ProductDialog#0" />
-            <element signature="e#805#865#0" />
-            <element signature="e#884#1130#0" />
-            <element signature="e#1171#1830#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -748,37 +617,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/product/components/carouselProduct.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/product/components/index.jsx">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/products/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="131" column="24" selection-start-line="131" selection-start-column="24" selection-end-line="131" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/product/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="93" selection-start-line="93" selection-end-line="93" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/components/global/products/products.jsx">
       <provider selected="true" editor-type-id="text-editor">
@@ -787,10 +627,167 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/components/product/components/carouselProduct.jsx">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/app/components/dialogPanel.jsx" />
     <entry file="file://$PROJECT_DIR$/components/global/products/product.jsx">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-rating/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="146" selection-start-line="146" selection-end-line="146" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/app/components/index.jsx" />
+    <entry file="file://$PROJECT_DIR$/components/app/components/MainNavbar/StatusBar.jsx" />
+    <entry file="file://$PROJECT_DIR$/components/app/MainNavbar/UserInfoDropdown.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="10" lean-forward="true" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/app/MainNavbar/SearchForm.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/products/components/SearchForm.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="e#0#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/products/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="131" column="24" selection-start-line="131" selection-start-column="24" selection-end-line="131" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/app/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mdbreact/dist/types/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1360" column="14" selection-start-line="1360" selection-start-column="14" selection-end-line="1360" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/app/AddedToCartModal.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/app/queries.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/app/ProductModal.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="177" column="13" lean-forward="true" selection-start-line="177" selection-start-column="13" selection-end-line="177" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apollo/resolvers/cart.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="100" column="1" lean-forward="true" selection-start-line="100" selection-start-column="1" selection-end-line="100" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apollo/client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/product/queries.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/product/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <caret line="38" column="53" lean-forward="true" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/ProductNumberInput.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/app/MainNavbar/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="65" column="6" lean-forward="true" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/app/MainNavbar/logo.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/app/MainNavbar/CartNavItem.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

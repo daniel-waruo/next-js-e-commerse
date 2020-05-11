@@ -1,16 +1,13 @@
 import React, {Component} from "react";
 import Logo from "./logo.svg";
 import {MDBBtn, MDBCol, MDBCollapse, MDBIcon, MDBNavbar, MDBNavbarNav, MDBNavItem, MDBRow} from "mdbreact";
-import SearchForm from "./search_form";
-import UserInfoDropdown from "./userInfoDropdown";
+import SearchForm from "./SearchForm";
+import UserInfoDropdown from "./UserInfoDropdown";
 import Link from 'next/link'
-import CartNavItem from "./cartNavItem"
-import {APP_QUERY} from "../../queries";
+import CartNavItem from "./CartNavItem"
 import compose from "lodash.flowright";
 import {graphql} from "react-apollo";
 import gql from "graphql-tag";
-import CartDialog from "../cartAddDialog"
-import ProductDialog from "../productDialog"
 
 const style = (
   <style>
@@ -56,7 +53,7 @@ class MainNavbar extends Component {
     const overlay = (
       <div
         style={{
-          backgroundColor: "transparent",
+          backgroundColor: 'rgba(0,0,0,0.3)',
           position: "fixed",
           zIndex: 1000,
           height: "100vh"
@@ -66,14 +63,7 @@ class MainNavbar extends Component {
     );
     const {collapseID} = this.state;
     const {
-      data: {
-        loading,
-        error,
-        user,
-        cart,
-        productDialog,
-        cartDialog
-      }
+      data: {loading, error, user, cart}
     } = this.props;
 
     //if (loading) return <SpinnerLoader/>;
@@ -150,15 +140,30 @@ class MainNavbar extends Component {
           </MDBCollapse>
         </MDBNavbar>
         {collapseID ? overlay : null}
-        <ProductDialog loading={loading} productDialog={productDialog}/>
-        <CartDialog loading={loading} cartDialog={cartDialog}/>
       </>
     );
   }
 }
 
+const navbarQueries = gql`
+query{
+  user{
+    id
+    firstName
+    lastName
+    email
+  }
+  cart{
+    id
+    number
+    products{
+      id
+    }
+  }
+}`;
+
 export default compose(
-  graphql(APP_QUERY),
+  graphql(navbarQueries),
   graphql(
     gql`
       mutation Logout{
