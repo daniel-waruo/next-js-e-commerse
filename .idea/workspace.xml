@@ -2,81 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38d6c4b7-e263-4646-a63b-27f18fe4d77f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apollo/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/apollo/client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/account/components/edit.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/AccountEditPage/AccountEditForm/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/account/components/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/account/edit.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/AccountEditPage/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/account/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/account/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/AccountViewPage/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/account/queries.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/AccountEditPage/queries.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/app/AddedToCartModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/App/AddedToCartModal.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/app/MainNavbar/CartNavItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/App/MainNavbar/CartNavItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/app/MainNavbar/SearchForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/App/MainNavbar/SearchForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/app/MainNavbar/UserInfoDropdown.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/App/MainNavbar/UserInfoDropdown.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/app/MainNavbar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/App/MainNavbar/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/app/MainNavbar/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/components/App/MainNavbar/logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/app/ProductModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/App/ProductModal.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/app/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/App/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/app/queries.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/App/queries.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/cart/components/cart.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/cart/components/emptyCart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CartPage/components/EmptyCart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/cart/components/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/CartPage/components/cart.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/cart/components/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/cart/components/searchForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CartPage/components/SearchForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/cart/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CartPage/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/cart/queries.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CartPage/queries.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/global/footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/MainFooter.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/global/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/global/loaders/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/global/loaders/mainLoader.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/global/loaders/mainLoader.style.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/global/loaders/spinnerLoader.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/global/menuLink.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/global/products/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/global/products/product.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProductCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/global/products/products.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProductView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/global/rangeSlider/components.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/RangeSlider/components.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/global/rangeSlider/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/global/rangeSlider/range.style.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/RangeSlider/range-slider.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/global/rangeSlider/rangeSlider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/RangeSlider/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/global/sidenav/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/SideNav/sidenav.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/global/sidenav/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SideNav/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/index/components/carouselHome.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/IndexPage/components/carouselHome.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/index/components/categoriesMenuLink.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/IndexPage/components/categoriesMenuLink.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/index/components/homeProducts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/IndexPage/components/HomeProducts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/index/components/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/IndexPage/components/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/index/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/IndexPage/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/index/queries.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/IndexPage/queries.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/login/components/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/LoginPage/components/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/login/components/loginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/LoginPage/components/LoginForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/login/components/socialLogin.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/LoginPage/components/SocialLogin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/login/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/LoginPage/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/login/queries.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/LoginPage/queries.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/product/components/carouselProduct.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/product/components/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/product/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProductPage/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/product/queries.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProductPage/queries.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/products/components/SearchForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProductListPage/components/SearchForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/products/components/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProductListPage/components/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/products/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProductListPage/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/products/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProductListPage/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/products/queries.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProductListPage/queries.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/register/components/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/register/components/registerForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/RegisterPage/RegisterForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/register/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/RegisterPage/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/register/queries.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/RegisterPage/queries.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/account/edit.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/account/edit.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/account/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/account/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/products/[category]/[slug].jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/products/[category]/[slug].jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/products/[category]/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/products/[category]/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/products/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/products/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/register.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -104,14 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="cart.jsx" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/cart.jsx">
+      <file leaf-file-name="package-lock.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package-lock.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4">
-              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="177">
+              <caret line="2020" column="25" lean-forward="true" selection-start-line="2020" selection-start-column="25" selection-end-line="2020" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -128,7 +51,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>250</find>
       <find>all_p</find>
       <find>PRODUCTS_QUERY</find>
       <find>css/dist</find>
@@ -158,6 +80,7 @@
       <find>my-4</find>
       <find>SpinnerLoader</find>
       <find>redirectNo</find>
+      <find>index</find>
     </findStrings>
     <replaceStrings>
       <replace>.</replace>
@@ -258,7 +181,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="699" />
@@ -277,11 +200,6 @@
             <path>
               <item name="next-js-e-commerse" type="b2602c69:ProjectViewProjectNode" />
               <item name="next-js-e-commerse" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="next-js-e-commerse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="next-js-e-commerse" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -552,17 +470,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="5" weight="0.32838285" />
-      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.40393344" side_tool="true" visible="true" weight="1.0" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5060514" side_tool="true" visible="true" weight="0.38118812" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.9207921" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.031353135" />
-      <window_info active="true" anchor="bottom" id="Run" order="14" sideWeight="0.5960666" visible="true" weight="1.0" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.494705" weight="0.38118812" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1603631" />
+      <window_info anchor="bottom" id="Run" order="14" sideWeight="0.5960666" weight="0.0" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49394855" visible="true" weight="0.38118812" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1603631" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" weight="0.32980332" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49848714" weight="0.35643566" />
@@ -653,26 +571,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/components/MainFooter.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/IndexPage/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="60" column="48" lean-forward="true" selection-start-line="60" selection-start-column="48" selection-end-line="60" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/IndexPage/components/HomeProducts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1092,13 +990,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/cart.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4">
+        <state relative-caret-position="68">
           <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="2020" column="25" lean-forward="true" selection-start-line="2020" selection-start-column="25" selection-end-line="2020" selection-end-column="25" />
         </state>
       </provider>
     </entry>
