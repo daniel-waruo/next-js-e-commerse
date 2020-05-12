@@ -6,7 +6,7 @@ import {graphql} from "react-apollo";
 import compose from "lodash.flowright";
 import MainLoader from "../MainLoader"
 import {NextSeo} from "next-seo"
-import {LoginForm} from "./components/index"
+import {LoginForm} from "./components"
 
 class LoginPage extends React.PureComponent {
   state = {

@@ -1,6 +1,6 @@
 import React from 'react'
 import {MDBInput} from "mdbreact";
-import SearchForm from "./searchForm"
+import SearchForm from "./SearchForm"
 
 export class CategoryFilter extends React.Component {
   //define the state

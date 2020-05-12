@@ -1,6 +1,6 @@
 import {withApollo} from "../../apollo";
 import AccountEditPage from "../../components/AccountEditPage";
-import {withApp} from "../../components/App/index";
+import {withApp} from "../../components/App";
 import {withAuthSync} from "../../utils/auth";
 
 export default withApollo()(

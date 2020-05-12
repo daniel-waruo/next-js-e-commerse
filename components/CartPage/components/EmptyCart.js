@@ -1,5 +1,5 @@
 import React from 'react';
-import {SearchForm} from "./index"
+import SearchForm from "./SearchForm"
 import {MDBContainer} from "mdbreact";
 
 export function EmptyCart() {

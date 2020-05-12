@@ -2,9 +2,7 @@ import React, {Component} from 'react'
 import {MDBCol, MDBRow} from 'mdbreact'
 import {graphql} from 'react-apollo'
 import {HOME_QUERIES} from './queries'
-import CarouselHome from "./components/carouselHome"
-import CategoryMenuLinks from "./components/categoriesMenuLink"
-import ProductsHome from "./components/HomeProducts"
+import {CategoryMenuLinks, HomeCarousel, HomeProducts} from "./components"
 import MainLoader from '../MainLoader'
 import {NextSeo} from 'next-seo'
 
@@ -42,14 +40,14 @@ class IndexPage extends Component {
             </div>
           </MDBCol>
           <MDBCol md={"9"} className={"p-0 z-depth-1 rounded mb-0"}>
-            <CarouselHome objects={allCarousel} heightClass="f-85"/>
+            <HomeCarousel objects={allCarousel} heightClass="f-85"/>
           </MDBCol>
         </MDBRow>
         <MDBRow>
           <MDBCol size={"12"} className={"mt-4"}>
             <div className={"p-2 m-2 z-depth-1 rounded mb-0"}>
               <h1 className={"text-center py-3"}>Featured Products</h1>
-              <ProductsHome products={allFeaturedProducts}/>
+              <HomeProducts products={allFeaturedProducts}/>
             </div>
           </MDBCol>
         </MDBRow>

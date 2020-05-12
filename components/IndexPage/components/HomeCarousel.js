@@ -2,7 +2,7 @@ import React from 'react';
 import {MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBMask, MDBView} from "mdbreact";
 import {carouselImageStyle} from "../../../_helpers";
 
-class CarouselHome extends React.PureComponent {
+class HomeCarousel extends React.PureComponent {
   render() {
     const props = this.props;
     const carouselList = props.objects.map(
@@ -41,4 +41,4 @@ class CarouselHome extends React.PureComponent {
   }
 }
 
-export default CarouselHome;
+export default HomeCarousel;

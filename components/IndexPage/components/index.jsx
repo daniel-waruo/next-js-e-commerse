@@ -1,9 +1,9 @@
-import CarouselHome from "./carouselHome.jsx";
-import ProductsHome from "./homeProducts.jsx";
-import CategoryMenuLinks from "./categoriesMenuLink.jsx";
+import HomeCarousel from "./HomeCarousel";
+import HomeProducts from "./HomeProducts";
+import CategoryMenuLinks from "./CategoryMenuLinks";
 
 export {
-    CarouselHome,
-    ProductsHome,
+    HomeCarousel,
+    HomeProducts,
     CategoryMenuLinks
 }
