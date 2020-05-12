@@ -1,8 +1,8 @@
 import React from 'react';
 import {withApollo} from "../apollo/lib/apollo";
-import Login from "../components/login";
-import {withApp} from "../components/app";
+import LoginPage from "../components/LoginPage";
+import {withApp} from "../components/App";
 
 export default withApollo()(
-  withApp(Login)
+  withApp(LoginPage)
 );

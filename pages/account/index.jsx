@@ -1,10 +1,10 @@
 import {withApollo} from "../../apollo";
-import AccountPage from "../../components/account/index";
+import AccountViewPage from "../../components/AccountViewPage";
 import {withApp} from "../../components/app/index";
 import {withAuthSync} from "../../utils/auth";
 
 export default withApollo()(
   withAuthSync(// auth hoc
-    withApp(AccountPage)//with app account//
+    withApp(AccountViewPage)//with app account//
   )
 )

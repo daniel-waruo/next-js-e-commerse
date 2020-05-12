@@ -1,7 +1,7 @@
 import {withApollo} from "../apollo";
-import {HomePage} from "../components/index";
-import {withApp} from "../components/app";
+import IndexPage from "../components/IndexPage";
+import {withApp} from "../components/App";
 
 export default withApollo()(
-  withApp(HomePage)
+  withApp(IndexPage)
 );

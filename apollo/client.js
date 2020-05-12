@@ -102,7 +102,7 @@ export default function createApolloClient(initialState, ctx) {
     const timeoutLink = new ApolloLinkTimeout(5000); // 5 second timeout
     // combine the batchHttpLink with the concat
     batchHttpLink = errorLink.concat(timeoutLink.concat(batchHttpLink));
-    console.info("batch link sent to the server");
+    console.info("batch request sent to the server");
   }
 
   // The `ctx` (NextPageContext) will only be present on the server.

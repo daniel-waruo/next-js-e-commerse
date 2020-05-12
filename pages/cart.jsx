@@ -1,7 +1,7 @@
 import {withApollo} from "../apollo";
-import CartPage from "../components/cart"
-import {withApp} from "../components/app";
+import CartPage from "../components/CartPage"
+import {withApp} from "../components/App";
 
-export default withApollo()(
+export default withApollo({ssr:false})(
   withApp(CartPage)
 );

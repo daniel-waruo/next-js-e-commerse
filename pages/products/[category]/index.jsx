@@ -1,8 +1,8 @@
 import React from 'react'
-import ProductsPage from "../../../components/products"
+import ProductListPage from "../../../components/ProductListPage"
 import {withApollo} from "../../../apollo";
-import {withApp} from "../../../components/app";
+import {withApp} from "../../../components/App";
 
 export default withApollo()(
-  withApp(ProductsPage)
+  withApp(ProductListPage)
 );
