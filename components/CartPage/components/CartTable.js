@@ -65,13 +65,16 @@ export class CartTable extends React.PureComponent {
               </Link>
             </div>
             <div className="right">
-              <MDBBtn type={"submit"} outline color={"secondary"} className={"rounded-pill"} onClick={this.props.updateCart}>
+              <MDBBtn type={"submit"} outline color={"secondary"} className={"rounded-pill"}
+                      onClick={this.props.updateCart}>
                 <MDBIcon icon="sync-alt" className={"p-1 "}/> Update cart
               </MDBBtn>
-              <MDBBtn color={"primary"} className={"rounded-pill"}>
-                Proceed to checkout
-                <MDBIcon icon="arrow-right" className={"p-1"}/>
-              </MDBBtn>
+              <Link href={"/checkout"}>
+                <a className="btn btn-primary rounded-pill">
+                  Proceed to checkout
+                  <MDBIcon icon="arrow-right" className={"p-1"}/>
+                </a>
+              </Link>
             </div>
           </div>
         </form>
