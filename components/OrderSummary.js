@@ -5,7 +5,7 @@ export class OrderSummary extends React.PureComponent {
   render() {
     //TODO:implement real data on Order Summary
     // get the cart products data from props
-    const {cart: {total}, className} = this.props;
+    const {cart: {total}, shipping, tax, className} = this.props;
     // create cart items to render
     return (
       <div className={className}>
@@ -25,11 +25,11 @@ export class OrderSummary extends React.PureComponent {
             </tr>
             <tr>
               <td>Shipping and handling</td>
-              <th>N/A</th>
+              <th>{shipping || 'N/A'}</th>
             </tr>
             <tr>
               <td>Tax</td>
-              <th>N/A</th>
+              <th>{shipping || 'N/A'}</th>
             </tr>
             <tr className="total">
               <td>Total</td>
@@ -45,5 +45,7 @@ export class OrderSummary extends React.PureComponent {
 
 OrderSummary.propTypes = {
   cart: PropTypes.object.isRequired,
+  shipping: PropTypes.string,
+  tax: PropTypes.string,
   className: PropTypes.string
 };

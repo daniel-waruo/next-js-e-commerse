@@ -5,6 +5,6 @@ import {withAuthSync} from "../../utils/auth";
 
 export default withApollo()(
   withAuthSync(// auth hoc
-    withApp(AccountViewPage)//with app account//
+    withApp(AccountViewPage, true)//with app account//
   )
 )

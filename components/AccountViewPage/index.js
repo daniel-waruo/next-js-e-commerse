@@ -23,10 +23,8 @@ class AccountViewPage extends React.PureComponent {
     //TODO:create an error page
     if (error) return null;
 
-    // if user is null redirect to login page
-    if (!user) return Router.push("/login");
-
     const {email, firstName, lastName} = user;
+
     const fullName = `${firstName} ${lastName}`;
 
     return (

@@ -1,12 +1,13 @@
-import compose from "lodash.flowright";
 import React, {Component} from 'react';
 import {MDBCol, MDBContainer, MDBRow} from 'mdbreact';
-import {CartTable, EmptyCart, OrderSummary} from "./components";
+import {NextSeo} from 'next-seo'
 import {graphql} from 'react-apollo';
+import compose from "lodash.flowright";
+
 import {cartQuery, removeFromCart, updateCart} from './queries'
 import {APP_QUERY} from "../App/queries";
 import MainLoader from '../MainLoader';
-import {NextSeo} from 'next-seo'
+import {CartTable, EmptyCart, OrderSummary} from "./components";
 
 class CartPage extends Component {
 
@@ -105,8 +106,7 @@ class CartPage extends Component {
     // look for a Server Error Page
     if (error) return null;
 
-    if (!cart)
-      return null;
+    if (!cart) return null;
 
     if (!cart.products.length)
       return (
@@ -141,9 +141,7 @@ class CartPage extends Component {
 }
 
 export default compose(
-  graphql(
-    cartQuery
-  ),
+  graphql(cartQuery),
   graphql(removeFromCart, {name: 'removeFromCart'}),
   graphql(updateCart, {name: 'updateCart'})
 )(CartPage);
