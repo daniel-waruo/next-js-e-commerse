@@ -36,3 +36,7 @@ export const CLIENT_IDS = {
 export const INSTAGRAM_LOGIN_URL = `${API_URL}/accounts/auth/social/instagram/`;
 export const GOOGLE_LOGIN_URL = `${API_URL}/accounts/auth/social/google/`;
 export const FACEBOOK_LOGIN_URL = `${API_URL}/accounts/auth/social/facebook/`;
+
+export const MAP_BOX = {
+  'token':"pk.eyJ1IjoiYWZyb2Rhbm5pZSIsImEiOiJja2E4NzAxZXgwMXR6MndxajJvbWZ3amQ5In0.uP7r6M2GNaxQLiBXys8V6A"
+}

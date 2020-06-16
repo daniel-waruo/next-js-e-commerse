@@ -57,7 +57,7 @@ CartItem.propTypes = {
   slug:PropTypes.string.isRequired,
   image_url:PropTypes.string.isRequired,
   name:PropTypes.string.isRequired,
-  number:PropTypes.string.isRequired,
+  number:PropTypes.number.isRequired,
   price:PropTypes.string.isRequired,
   total:PropTypes.string.isRequired
 };

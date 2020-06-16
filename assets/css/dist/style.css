@@ -11991,7 +11991,7 @@ a.border.nav-link.border-light.rounded.mr-1:hover {
     content: " ";
     width: 100%;
     height: 2px;
-    background-color: #7283a7;
+    background-color: #2bbbad;
 }
 
 .steps-form-2 .steps-row-2 .steps-step-2 {
@@ -12012,9 +12012,9 @@ a.border.nav-link.border-light.rounded.mr-1:hover {
 .steps-form-2 .steps-row-2 .steps-step-2 .btn-circle-2 {
     width: 70px;
     height: 70px;
-    border: 2px solid #59698D;
+    border: 2px solid #2bbbad;
     background-color: white !important;
-    color: #59698D !important;
+    color: #2bbbad !important;
     border-radius: 50%;
     padding: 22px 18px 15px 18px;
     margin-top: -22px;
@@ -12022,7 +12022,7 @@ a.border.nav-link.border-light.rounded.mr-1:hover {
 
 .steps-form-2 .steps-row-2 .steps-step-2 .btn-circle-2:hover {
     border: 2px solid #4285F4;
-    color: #4285F4 !important;
+    color: #2bbbad !important;
     background-color: white !important;
 }
 
